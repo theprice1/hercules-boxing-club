@@ -1,1 +1,225 @@
-# Location and Trial Booking
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | Hercules Boxing Club | Islington</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-900 flex flex-col min-h-screen">
+    <!-- Navigation Bar -->
+    <nav class="bg-black text-white p-4 sticky top-0 z-50">
+      <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-2xl font-bold tracking-tight uppercase">
+          Hercules Boxing Club
+        </h1>
+        <div class="hidden md:flex space-x-6 font-semibold">
+          <a href="index.html" class="hover:text-red-500 transition">Home</a>
+          <a href="about.html" class="hover:text-red-500 transition"
+            >About the CIC</a
+          >
+          <a href="timetable.html" class="hover:text-red-500 transition"
+            >Timetable</a
+          >
+          <a href="safeguarding.html" class="hover:text-red-500 transition"
+            >Safeguarding</a
+          >
+          <a href="contact.html" class="text-red-500 transition">Contact</a>
+        </div>
+        <!-- Mobile Menu Button -->
+        <button
+          type="button"
+          aria-label="Open mobile menu"
+          title="Open mobile menu"
+          class="md:hidden text-white focus:outline-none"
+        >
+          <span class="sr-only">Open mobile menu</span>
+          <svg
+            aria-hidden="true"
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Main Content Wrapper -->
+    <main class="flex-grow py-16">
+      <div class="container mx-auto px-4 max-w-5xl">
+        <!-- Page Header -->
+        <div class="text-center mb-16">
+          <span
+            class="bg-red-600 text-white px-4 py-1 text-sm font-bold uppercase rounded-full mb-3 inline-block tracking-wider"
+          >
+            Get In Touch
+          </span>
+          <h2
+            class="text-4xl md:text-5xl font-extrabold uppercase tracking-tight"
+          >
+            Contact & Visit Us
+          </h2>
+          <p class="text-gray-600 mt-3 max-w-xl mx-auto">
+            Have questions about joining, subsidies, or grant partnerships?
+            Reach out to our team below.
+          </p>
+        </div>
+
+        <!-- Grid Layout -->
+        <div class="grid md:grid-cols-2 gap-12">
+          <!-- Contact Form -->
+          <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-200">
+            <h3 class="text-2xl font-bold uppercase mb-6 text-black">
+              Send Us a Message
+            </h3>
+            <form action="#" method="POST" class="space-y-4">
+              <div>
+                <label class="block text-sm font-bold uppercase mb-1" for="name"
+                  >Your Name</label
+                >
+                <input
+                  class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:border-red-600"
+                  type="text"
+                  id="name"
+                  required
+                  placeholder="John Doe"
+                />
+              </div>
+              <div>
+                <label
+                  class="block text-sm font-bold uppercase mb-1"
+                  for="email"
+                  >Email Address</label
+                >
+                <input
+                  class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:border-red-600"
+                  type="email"
+                  id="email"
+                  required
+                  placeholder="john@example.com"
+                />
+              </div>
+              <div>
+                <label
+                  class="block text-sm font-bold uppercase mb-1"
+                  for="message"
+                  >Message / Enquiry</label
+                >
+                <textarea
+                  class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:border-red-600 h-32"
+                  id="message"
+                  required
+                  placeholder="Tell us what you're looking for..."
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="w-full bg-black text-white font-bold uppercase py-3 rounded hover:bg-gray-800 transition shadow"
+              >
+                Send Enquiry
+              </button>
+            </form>
+          </div>
+
+          <!-- Gym Details & Location Info -->
+          <div class="space-y-8">
+            <div
+              class="bg-white p-8 rounded-lg shadow-sm border border-gray-200"
+            >
+              <h3 class="text-2xl font-bold uppercase mb-4 text-black">
+                Gym Location
+              </h3>
+              <p class="text-gray-700 mb-4 leading-relaxed">
+                Come down to the gym during our open session hours, or drop by
+                to speak directly with our coaching team.
+              </p>
+              <div class="space-y-3 text-sm text-gray-700">
+                <p>
+                  <strong>Address:</strong><br />1a Hercules Street<br />Islington,
+                  London<br />N7 6AT
+                </p>
+                <p><strong>Email:</strong> info@herculesboxing.co.uk</p>
+              </div>
+            </div>
+
+            <div class="bg-black text-white p-8 rounded-lg shadow-sm">
+              <h3 class="text-xl font-bold uppercase mb-3">
+                Looking to Partner?
+              </h3>
+              <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                We are actively open to discussions with grant bodies, community
+                leaders, and local authorities looking to support youth programs
+                in Islington.
+              </p>
+              <span
+                class="text-red-500 font-bold uppercase text-sm tracking-wider"
+                >CIC Registration Active</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-400 py-12 border-t border-gray-800">
+      <div class="container mx-auto px-4 grid md:grid-cols-3 gap-8 text-sm">
+        <div>
+          <h4 class="text-white text-lg font-bold uppercase mb-4">
+            Hercules Boxing Club
+          </h4>
+          <p>
+            A registered Community Interest Company (CIC). Building champions in
+            and out of the ring.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-white text-lg font-bold uppercase mb-4">Location</h4>
+          <p>1a Hercules Street<br />Islington, London<br />N7 6AT</p>
+        </div>
+        <div>
+          <h4 class="text-white text-lg font-bold uppercase mb-4">
+            Important Links
+          </h4>
+          <ul class="space-y-2">
+            <li>
+              <a href="safeguarding.html" class="hover:text-red-500"
+                >Safeguarding Policy</a
+              >
+            </li>
+            <li>
+              <a href="contact.html" class="hover:text-red-500">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JS for Mobile Menu -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
