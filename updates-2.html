@@ -3,10 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Updates 2: Manual Coding vs. Embedded Feed | Hercules Boxing Club |
-      Islington
-    </title>
+    <title>Gym News & Results | Hercules Boxing Club | Islington</title>
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -32,6 +29,8 @@
         <h1 class="text-2xl font-bold tracking-tight uppercase">
           Hercules Boxing Club
         </h1>
+
+        <!-- Clean, Flat Navigation -->
         <div class="hidden md:flex space-x-6 font-semibold items-center">
           <a href="index.html" class="hover:text-red-500 transition">Home</a>
           <a href="about.html" class="hover:text-red-500 transition"
@@ -40,43 +39,10 @@
           <a href="timetable.html" class="hover:text-red-500 transition"
             >Timetable</a
           >
-
-          <!-- UPDATED: UPDATES DROPDOWN BELOW -->
-          <div class="relative group">
-            <button
-              class="text-red-500 transition inline-flex items-center gap-1 font-semibold group-hover:text-white"
-            >
-              Updates
-              <svg
-                class="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M19 9l-7 7-7-7"
-                ></path>
-              </svg>
-            </button>
-            <div
-              class="absolute top-full -left-1/2 mt-2 w-48 bg-black p-4 rounded shadow-xl border border-gray-900 hidden group-hover:block z-50 text-sm"
-            >
-              <a
-                href="updates.html"
-                class="block py-2 text-red-500 hover:text-white"
-                >Live Feed (Setup A)</a
-              >
-              <a
-                href="updates-2.html"
-                class="block py-2 text-gray-300 hover:text-red-500"
-                >Manual Code (Setup B)</a
-              >
-            </div>
-          </div>
-
+          <a href="updates.html" class="hover:text-red-500 transition"
+            >Updates</a
+          >
+          <a href="updates-2.html" class="text-red-500 transition">Updates 2</a>
           <a href="safeguarding.html" class="hover:text-red-500 transition"
             >Safeguarding</a
           >
@@ -84,6 +50,7 @@
             >Contact</a
           >
         </div>
+
         <!-- Mobile Menu Button -->
         <button
           type="button"
@@ -112,163 +79,117 @@
 
     <!-- Main Content Wrapper -->
     <main class="flex-grow py-16">
-      <div class="container mx-auto px-4 max-w-5xl">
+      <div class="container mx-auto px-4 max-w-4xl">
         <!-- Page Header -->
         <div class="text-center mb-16">
           <span
             class="bg-red-600 text-white px-4 py-1 text-sm font-bold uppercase rounded-full mb-3 inline-block tracking-wider"
           >
-            Operational Handover Guide
+            Noticeboard
           </span>
           <h2
             class="text-4xl md:text-5xl font-extrabold uppercase tracking-tight"
           >
-            Digital Handover: Updating Your Site
+            Gym News & Results
           </h2>
           <p class="text-gray-600 mt-3 max-w-xl mx-auto">
-            This page is an illustrative guide to demonstrate how your club can
-            manage updates. It compares the modern, maintenance-free model
-            (Approach A) with a standard coding model (Approach B).
+            The latest fight results, timetable changes, and club announcements.
           </p>
         </div>
 
-        <!-- Split Grid Layout -->
-        <div class="grid md:grid-cols-2 gap-8 md:gap-12">
-          <!-- LEFT COLUMN: Manual Coding Example (Approach B) -->
-          <div class="space-y-6">
-            <div
-              class="bg-white p-8 rounded-lg shadow-sm border border-gray-200"
-            >
-              <div
-                class="w-12 h-12 bg-red-100 text-red-600 rounded-full flex items-center justify-center font-bold mb-4"
-              >
-                A
-              </div>
-              <h3 class="text-2xl font-bold uppercase mb-2 text-black">
-                APPROACH B: Manual Coding
-              </h3>
-              <p class="text-gray-600 mb-6 text-sm">
-                Best for: Teams with coding knowledge, or for making structural
-                news changes (like policy updates).
-              </p>
-              <p class="text-gray-600 mb-6 text-sm">
-                For this model, your team would need to edit the raw HTML code
-                in this file to add new table rows.
-              </p>
-
-              <h4 class="font-bold uppercase text-black text-lg mb-3">
-                Gym & Fight Updates (Manual Table)
-              </h4>
-
-              <!-- Updates Table with Interactive Demo -->
-              <div
-                class="bg-gray-50 border border-gray-100 rounded p-4 mb-6 text-sm"
-              >
-                <table class="w-full text-left border-collapse">
-                  <thead>
-                    <tr
-                      class="text-xs uppercase text-gray-500 font-bold border-b border-gray-200"
+        <!-- Manual Updates Table (Approach B) -->
+        <div
+          class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200"
+        >
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="bg-black text-white uppercase text-sm">
+                  <th class="p-4 w-32">Date</th>
+                  <th class="p-4 w-40">Category</th>
+                  <th class="p-4">Headline / Details</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200 text-sm">
+                <!-- Row 1: Fight Result -->
+                <tr class="hover:bg-gray-50 transition">
+                  <td class="p-4 font-bold text-gray-800">2026-08-22</td>
+                  <td class="p-4">
+                    <span
+                      class="bg-red-100 text-red-800 text-xs font-bold px-2.5 py-0.5 rounded uppercase tracking-wide"
+                      >Fight Result</span
                     >
-                      <th class="p-2">Date</th>
-                      <th class="p-2">Category</th>
-                      <th class="p-2">Update</th>
-                      <th class="p-2">Details</th>
-                    </tr>
-                  </thead>
-                  <tbody
-                    id="updates-table-tbody"
-                    class="divide-y divide-gray-100"
-                  >
-                    <!-- Existing rows... -->
-                    <tr>
-                      <td class="p-2">2023-11-20</td>
-                      <td class="p-2">
-                        <span
-                          class="bg-red-100 text-red-800 text-xs font-bold px-2 py-0.5 rounded"
-                          >FIGHT RESULT</span
-                        >
-                      </td>
-                      <td class="p-2">Junior London ABAs</td>
-                      <td class="p-2">
-                        Alex Petrov wins by TKO in Round 2. Champion! 🥊
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="p-2">2023-11-15</td>
-                      <td class="p-2">
-                        <span
-                          class="bg-gray-100 text-gray-800 text-xs font-bold px-2 py-0.5 rounded"
-                          >GYM NEWS</span
-                        >
-                      </td>
-                      <td class="p-2">Closed for Bank Holiday</td>
-                      <td class="p-2">
-                        Gym will be closed this Monday. Open Tuesday!
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+                  </td>
+                  <td class="p-4">
+                    <p class="font-bold text-black text-base mb-1">
+                      Junior London ABAs Victory
+                    </p>
+                    <p class="text-gray-600">
+                      Massive win for our Junior captain, stopping their
+                      opponent in the 2nd round. Champion in the making!
+                    </p>
+                  </td>
+                </tr>
 
-              <!-- Interactive Demo Button -->
-              <button
-                type="button"
-                onclick="demoAddRow()"
-                class="w-full bg-red-600 text-white text-center font-bold uppercase py-3 rounded hover:bg-red-700 transition flex items-center justify-center gap-2 shadow-sm"
-              >
-                DEMO: Add a Victory Row!
-              </button>
-            </div>
+                <!-- Row 2: Gym News -->
+                <tr class="hover:bg-gray-50 transition">
+                  <td class="p-4 font-bold text-gray-800">2026-08-15</td>
+                  <td class="p-4">
+                    <span
+                      class="bg-gray-200 text-gray-800 text-xs font-bold px-2.5 py-0.5 rounded uppercase tracking-wide"
+                      >Gym News</span
+                    >
+                  </td>
+                  <td class="p-4">
+                    <p class="font-bold text-black text-base mb-1">
+                      Bank Holiday Weekend Closure
+                    </p>
+                    <p class="text-gray-600">
+                      The gym will be closed this upcoming Bank Holiday Monday.
+                      Enjoy the rest, champions! Standard timetable resumes
+                      Tuesday.
+                    </p>
+                  </td>
+                </tr>
+
+                <!-- Row 3: Event -->
+                <tr class="hover:bg-gray-50 transition">
+                  <td class="p-4 font-bold text-gray-800">2026-08-01</td>
+                  <td class="p-4">
+                    <span
+                      class="bg-black text-white text-xs font-bold px-2.5 py-0.5 rounded uppercase tracking-wide"
+                      >Event</span
+                    >
+                  </td>
+                  <td class="p-4">
+                    <p class="font-bold text-black text-base mb-1">
+                      England Boxing Affiliation Update
+                    </p>
+                    <p class="text-gray-600">
+                      Our CIC paperwork is officially submitted. We are one step
+                      closer to full national competition clearance for all
+                      carded boxers.
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
+        </div>
 
-          <!-- RIGHT COLUMN: Embedded Feed Strategy (Approach A) -->
-          <div class="space-y-6">
-            <div
-              class="bg-white p-8 rounded-lg shadow-sm border border-gray-200"
-            >
-              <div
-                class="w-12 h-12 bg-gray-100 text-black rounded-full flex items-center justify-center font-bold mb-4"
-              >
-                B
-              </div>
-              <h3 class="text-2xl font-bold uppercase mb-2 text-black">
-                APPROACH A: Live Feed (Maintenance-Free)
-              </h3>
-              <p class="text-gray-600 mb-6 text-sm leading-relaxed">
-                Best for: Fast-moving teams focused on training. This model
-                allows coaches to manage updates entirely from their phones,
-                without needing code.
-              </p>
-
-              <!-- PREVIEW Visual: Social Media Workflow (Simulated Feed from image_0.png) -->
-              <div
-                class="w-full h-48 bg-gray-200 rounded flex items-center justify-center text-xs text-gray-400 font-bold uppercase tracking-wider border-2 border-dashed border-gray-300 mb-6"
-              >
-                [ Live Instagram Feed (PREVIEW) - Connects on account launch ]
-              </div>
-
-              <h4 class="font-bold uppercase text-black text-sm mb-3">
-                Workflow for Approaches A & B
-              </h4>
-              <p class="text-gray-600 mb-6 text-sm">
-                For the live feed approach, your team uses pre-made Canva
-                templates on their phones. Posts instantly sync to the website.
-                No maintenance required.
-              </p>
-              <ul class="space-y-3 text-sm text-gray-700 list-decimal pl-5">
-                <li>Edit provided Canva template on your phone.</li>
-                <li>Drop in fight result photo & edit text.</li>
-                <li>Post to Instagram/Facebook.</li>
-                <li>The feed below automatically updates!</li>
-              </ul>
-            </div>
-          </div>
+        <div class="mt-6 text-center text-sm text-gray-500">
+          <p>
+            *(Coach Note: To add new updates, edit this file in GitHub and copy
+            an existing table row.)*
+          </p>
         </div>
       </div>
     </main>
 
-    <!-- Footer (Same as image_0.png) -->
-    <footer class="bg-black text-gray-400 py-12 border-t border-gray-800">
+    <!-- Footer -->
+    <footer
+      class="bg-black text-gray-400 py-12 border-t border-gray-800 mt-auto"
+    >
       <div class="container mx-auto px-4 grid md:grid-cols-3 gap-8 text-sm">
         <div>
           <h4 class="text-white text-lg font-bold uppercase mb-4">
@@ -279,7 +200,6 @@
             and out of the ring.
           </p>
           <div class="flex space-x-6 text-white mt-4">
-            <!-- Instagram Logo -->
             <a
               href="#"
               aria-label="Instagram"
@@ -300,7 +220,6 @@
                 />
               </svg>
             </a>
-            <!-- TikTok Logo -->
             <a
               href="#"
               aria-label="TikTok"
@@ -319,7 +238,6 @@
                 />
               </svg>
             </a>
-            <!-- Twitter / X Logo -->
             <a
               href="#"
               aria-label="Twitter"
@@ -366,29 +284,5 @@
 
     <!-- JS for Mobile Menu -->
     <script src="js/main.js"></script>
-
-    <!-- DEMO JS Script for updates-2.html -->
-    <script>
-      function demoAddRow() {
-        // Get the table body
-        const tbody = document.getElementById("updates-table-tbody");
-
-        // Create a new row HTML string (A template a coach would copy)
-        const newRowHtml =
-          `
-                <tr>
-                    <td class="p-2 text-red-600 font-bold">` +
-          new Date().toISOString().split("T")[0] +
-          `</td>
-                    <td class="p-2"><span class="bg-red-100 text-red-800 text-xs font-bold px-2 py-0.5 rounded">DEMO WIN</span></td>
-                    <td class="p-2">Mock Victory - Round 3 TKO</td>
-                    <td class="p-2">This is an illustrative victory row. A coach would copy the HTML code to add this permanently.</td>
-                </tr>
-            `;
-
-        // Add the new row to the top of the table
-        tbody.insertAdjacentHTML("afterbegin", newRowHtml);
-      }
-    </script>
   </body>
 </html>
