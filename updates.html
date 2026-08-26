@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Timetable | Hercules Boxing Club | Islington</title>
+    <title>Updates & Results | Hercules Boxing Club | Islington</title>
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -34,10 +34,10 @@
           <a href="about.html" class="hover:text-red-500 transition"
             >About the CIC</a
           >
-          <a href="timetable.html" class="text-red-500 transition">Timetable</a>
-          <a href="updates.html" class="hover:text-red-500 transition"
-            >Updates</a
+          <a href="timetable.html" class="hover:text-red-500 transition"
+            >Timetable</a
           >
+          <a href="updates.html" class="text-red-500 transition">Updates</a>
           <a href="safeguarding.html" class="hover:text-red-500 transition"
             >Safeguarding</a
           >
@@ -75,155 +75,132 @@
     <main class="flex-grow py-16">
       <div class="container mx-auto px-4 max-w-5xl">
         <!-- Page Header -->
-        <div class="text-center mb-12">
+        <div class="text-center mb-16">
           <span
             class="bg-red-600 text-white px-4 py-1 text-sm font-bold uppercase rounded-full mb-3 inline-block tracking-wider"
           >
-            Training Schedule
+            Gym News & Fight Cards
           </span>
           <h2
             class="text-4xl md:text-5xl font-extrabold uppercase tracking-tight"
           >
-            Gym Timetable
+            Updates & Results
           </h2>
           <p class="text-gray-600 mt-3 max-w-xl mx-auto">
-            Whether you're stepping into the ring for fitness, youth
-            development, or elite competition training, we have a session for
-            you.
+            Follow our champions and get the latest news straight from the gym
+            floor. Our live feed connects here once official accounts launch.
           </p>
         </div>
 
-        <!-- Squad Legend Cards -->
-        <div class="grid md:grid-cols-3 gap-6 mb-12">
-          <div
-            class="bg-white p-6 rounded-lg border-l-4 border-red-600 shadow-sm"
-          >
-            <h3 class="font-bold text-lg uppercase mb-1">Junior Squad</h3>
-            <p class="text-sm text-gray-600">
-              Focused on discipline, fitness, and fundamentals for younger
-              members.
-            </p>
-          </div>
-          <div
-            class="bg-white p-6 rounded-lg border-l-4 border-black shadow-sm"
-          >
-            <h3 class="font-bold text-lg uppercase mb-1">Senior & Fitness</h3>
-            <p class="text-sm text-gray-600">
-              Open to all skill levels. High-intensity conditioning and
-              technical boxing skills.
-            </p>
-          </div>
-          <div
-            class="bg-white p-6 rounded-lg border-l-4 border-red-600 shadow-sm"
-          >
-            <h3 class="font-bold text-lg uppercase mb-1">Competitive Squad</h3>
-            <p class="text-sm text-gray-600">
-              Strictly for carded or transition-ready boxers preparing for
-              official bouts.
-            </p>
-          </div>
-        </div>
+        <!-- Page Grid Structure -->
+        <div class="grid md:grid-cols-3 gap-12">
+          <!-- LEFT COLUMN: Live Feed Placement (Placeholder) -->
+          <div class="md:col-span-2 space-y-6">
+            <div
+              class="bg-white p-6 rounded-lg shadow-sm border border-gray-200"
+            >
+              <h3
+                class="text-2xl font-bold uppercase mb-4 text-black border-l-4 border-red-600 pl-4"
+              >
+                Live Social Feed
+              </h3>
 
-        <!-- Timetable Grid Table -->
-        <div
-          class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200"
-        >
-          <div class="overflow-x-auto">
-            <table class="w-full text-left border-collapse">
-              <thead>
-                <tr class="bg-black text-white uppercase text-sm">
-                  <th class="p-4">Day</th>
-                  <th class="p-4">Time</th>
-                  <th class="p-4">Session Type</th>
-                  <th class="p-4">Coach / Notes</th>
-                </tr>
-              </thead>
-              <tbody class="divide-y divide-gray-200 text-sm">
-                <tr class="hover:bg-gray-50">
-                  <td class="p-4 font-bold text-black">Monday</td>
-                  <td class="p-4 text-gray-600">17:00 - 18:30</td>
-                  <td class="p-4">
-                    <span
-                      class="bg-red-100 text-red-800 text-xs font-bold px-2.5 py-0.5 rounded"
-                      >Junior Squad</span
-                    >
-                  </td>
-                  <td class="p-4 text-gray-600">Fundamentals & Footwork</td>
-                </tr>
-                <tr class="hover:bg-gray-50">
-                  <td class="p-4 font-bold text-black">Monday</td>
-                  <td class="p-4 text-gray-600">19:00 - 20:30</td>
-                  <td class="p-4">
-                    <span
-                      class="bg-gray-100 text-gray-800 text-xs font-bold px-2.5 py-0.5 rounded"
-                      >Senior & Fitness</span
-                    >
-                  </td>
-                  <td class="p-4 text-gray-600">
-                    Conditioning & Sparring Prep
-                  </td>
-                </tr>
-                <tr class="hover:bg-gray-50">
-                  <td class="p-4 font-bold text-black">Wednesday</td>
-                  <td class="p-4 text-gray-600">17:00 - 18:30</td>
-                  <td class="p-4">
-                    <span
-                      class="bg-red-100 text-red-800 text-xs font-bold px-2.5 py-0.5 rounded"
-                      >Junior Squad</span
-                    >
-                  </td>
-                  <td class="p-4 text-gray-600">Bag Work & Combinations</td>
-                </tr>
-                <tr class="hover:bg-gray-50">
-                  <td class="p-4 font-bold text-black">Wednesday</td>
-                  <td class="p-4 text-gray-600">19:00 - 20:30</td>
-                  <td class="p-4">
-                    <span
-                      class="bg-red-800 text-white text-xs font-bold px-2.5 py-0.5 rounded"
-                      >Competitive Squad</span
-                    >
-                  </td>
-                  <td class="p-4 text-gray-600">Advanced Sparring & Tactics</td>
-                </tr>
-                <tr class="hover:bg-gray-50">
-                  <td class="p-4 font-bold text-black">Friday</td>
-                  <td class="p-4 text-gray-600">17:30 - 19:00</td>
-                  <td class="p-4">
-                    <span
-                      class="bg-gray-100 text-gray-800 text-xs font-bold px-2.5 py-0.5 rounded"
-                      >Senior & Fitness</span
-                    >
-                  </td>
-                  <td class="p-4 text-gray-600">Open Gym & Circuit Training</td>
-                </tr>
-                <tr class="hover:bg-gray-50">
-                  <td class="p-4 font-bold text-black">Saturday</td>
-                  <td class="p-4 text-gray-600">11:00 - 13:00</td>
-                  <td class="p-4">
-                    <span
-                      class="bg-red-800 text-white text-xs font-bold px-2.5 py-0.5 rounded"
-                      >Competitive Squad</span
-                    >
-                  </td>
-                  <td class="p-4 text-gray-600">
-                    Match Simulation & Conditioning
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
+              <!-- SIMULATED FEED PLACEHOLDER -->
+              <div class="space-y-4">
+                <!-- Placeholder Post 1 (Text Only) -->
+                <div
+                  class="bg-gray-50 p-4 rounded border border-gray-100 flex gap-4"
+                >
+                  <div
+                    class="w-10 h-10 bg-gray-200 rounded-full flex-shrink-0 flex items-center justify-center font-bold text-gray-500 text-xs"
+                  >
+                    HBC
+                  </div>
+                  <div>
+                    <p class="text-sm font-bold text-black mb-1">
+                      Hercules Boxing Club
+                      <span class="text-xs text-gray-400 font-normal"
+                        >(@herculesboxingcic)</span
+                      >
+                    </p>
+                    <p class="text-xs text-gray-400 mb-2">2 hours ago</p>
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                      Closed this upcoming Bank Holiday. Enjoy the rest,
+                      champions! Standard timetable resumes Tuesday. 🥊
+                    </p>
+                  </div>
+                </div>
 
-        <!-- Callout Note -->
-        <div
-          class="mt-8 bg-gray-100 border-l-4 border-black p-4 text-sm text-gray-700"
-        >
-          <p>
-            <strong>Note on Subsidies:</strong> Session fees are heavily
-            subsidized for local youth. First-time visitors must complete a
-            registration form and parental waiver (if under 18) before
-            participating.
-          </p>
+                <!-- Placeholder Post 2 (Visual/Image Simulation) -->
+                <div
+                  class="bg-gray-50 p-4 rounded border border-gray-100 flex gap-4"
+                >
+                  <div
+                    class="w-10 h-10 bg-gray-200 rounded-full flex-shrink-0 flex items-center justify-center font-bold text-gray-500 text-xs"
+                  >
+                    HBC
+                  </div>
+                  <div class="flex-grow">
+                    <p class="text-sm font-bold text-black mb-1">
+                      Hercules Boxing Club
+                      <span class="text-xs text-gray-400 font-normal"
+                        >(@herculesboxingcic)</span
+                      >
+                    </p>
+                    <p class="text-xs text-gray-400 mb-2">1 day ago</p>
+                    <p class="text-sm text-gray-700 leading-relaxed mb-3">
+                      MASSIVE WIN! Congratulations to our Junior captain for
+                      stopping their opponent in the 2nd round of the London
+                      ABAs! Champion in the making. #IslingtonBoxing #Champions
+                    </p>
+                    <!-- Gray Image Placeholder -->
+                    <div
+                      class="w-full h-48 bg-gray-200 rounded flex items-center justify-center text-xs text-gray-400 font-bold uppercase tracking-wider border-2 border-dashed border-gray-300"
+                    >
+                      [ Fight Result Photo (Simulated Image) ]
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Preview Notice Overlay -->
+              <div
+                class="mt-8 bg-black text-white text-center p-6 rounded shadow"
+              >
+                <h4 class="text-xl font-bold uppercase mb-2">
+                  Feed Connection Active
+                </h4>
+                <p class="text-sm text-gray-300 max-w-sm mx-auto">
+                  This page is pre-configured to connect to the
+                  Instagram/Facebook Live API. The feed will become active
+                  immediately upon account launch.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN: Canva Workflow Showcase -->
+          <div class="space-y-6">
+            <div
+              class="bg-white p-6 rounded-lg shadow-sm border border-gray-200"
+            >
+              <h3
+                class="text-lg font-bold uppercase mb-4 text-black border-l-4 border-black pl-3"
+              >
+                Coach Posting Workflow
+              </h3>
+              <p class="text-sm text-gray-700 mb-4 leading-relaxed">
+                Rather than coding website updates, coaches use pre-made Canva
+                templates on their phones to post instantly.
+              </p>
+              <ul class="space-y-3 text-xs text-gray-600 list-disc pl-5">
+                <li>Instant Fight Results</li>
+                <li>Last Minute Timetable Changes</li>
+                <li>Athlete Spotlights</li>
+                <li>Grant Success Announcements</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </main>
@@ -235,7 +212,7 @@
           <h4 class="text-white text-lg font-bold uppercase mb-4">
             Hercules Boxing Club
           </h4>
-          <p class="mb-4">
+          <p>
             A registered Community Interest Company (CIC). Building champions in
             and out of the ring.
           </p>
@@ -243,15 +220,16 @@
             <!-- Instagram Logo -->
             <a
               href="#"
+              aria-label="Instagram"
               title="Instagram launching soon"
               class="text-gray-400 hover:text-red-500 transition-colors duration-300"
             >
               <span class="sr-only">Instagram</span>
               <svg
+                aria-hidden="true"
                 class="w-6 h-6"
                 fill="currentColor"
                 viewBox="0 0 24 24"
-                aria-hidden="true"
               >
                 <path
                   fill-rule="evenodd"
@@ -260,38 +238,38 @@
                 />
               </svg>
             </a>
-
             <!-- TikTok Logo -->
             <a
               href="#"
+              aria-label="TikTok"
               title="TikTok launching soon"
               class="text-gray-400 hover:text-red-500 transition-colors duration-300"
             >
               <span class="sr-only">TikTok</span>
               <svg
+                aria-hidden="true"
                 class="w-6 h-6"
                 fill="currentColor"
                 viewBox="0 0 24 24"
-                aria-hidden="true"
               >
                 <path
                   d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"
                 />
               </svg>
             </a>
-
             <!-- Twitter / X Logo -->
             <a
               href="#"
+              aria-label="Twitter"
               title="X (Twitter) launching soon"
               class="text-gray-400 hover:text-red-500 transition-colors duration-300"
             >
               <span class="sr-only">Twitter / X</span>
               <svg
+                aria-hidden="true"
                 class="w-5 h-5 mt-0.5"
                 fill="currentColor"
                 viewBox="0 0 24 24"
-                aria-hidden="true"
               >
                 <path
                   d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 22.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
