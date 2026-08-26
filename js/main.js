@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <a href="about.html" class="hover:text-red-500 transition py-2 border-b border-gray-900">About the CIC</a>
             <a href="timetable.html" class="hover:text-red-500 transition py-2 border-b border-gray-900">Timetable</a>
             <a href="updates.html" class="hover:text-red-500 transition py-2 border-b border-gray-900">Updates</a>
+            <a href="updates-2.html" class="hover:text-red-500 transition py-2 border-b border-gray-900">Updates 2</a>
             <a href="safeguarding.html" class="hover:text-red-500 transition py-2 border-b border-gray-900">Safeguarding</a>
             <a href="contact.html" class="hover:text-red-500 transition py-2">Contact</a>
         `;

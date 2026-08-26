@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Updates 2: Manual Coding vs. Embedded Feed | Hercules Boxing Club |
+      Islington
+    </title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-900 flex flex-col min-h-screen">
+    <!-- Navigation Bar -->
+    <nav class="bg-black text-white p-4 sticky top-0 z-50">
+      <div class="container mx-auto flex justify-between items-center relative">
+        <h1 class="text-2xl font-bold tracking-tight uppercase">
+          Hercules Boxing Club
+        </h1>
+        <div class="hidden md:flex space-x-6 font-semibold items-center">
+          <a href="index.html" class="hover:text-red-500 transition">Home</a>
+          <a href="about.html" class="hover:text-red-500 transition"
+            >About the CIC</a
+          >
+          <a href="timetable.html" class="hover:text-red-500 transition"
+            >Timetable</a
+          >
+
+          <!-- UPDATED: UPDATES DROPDOWN BELOW -->
+          <div class="relative group">
+            <button
+              class="text-red-500 transition inline-flex items-center gap-1 font-semibold group-hover:text-white"
+            >
+              Updates
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+            <div
+              class="absolute top-full -left-1/2 mt-2 w-48 bg-black p-4 rounded shadow-xl border border-gray-900 hidden group-hover:block z-50 text-sm"
+            >
+              <a
+                href="updates.html"
+                class="block py-2 text-red-500 hover:text-white"
+                >Live Feed (Setup A)</a
+              >
+              <a
+                href="updates-2.html"
+                class="block py-2 text-gray-300 hover:text-red-500"
+                >Manual Code (Setup B)</a
+              >
+            </div>
+          </div>
+
+          <a href="safeguarding.html" class="hover:text-red-500 transition"
+            >Safeguarding</a
+          >
+          <a href="contact.html" class="hover:text-red-500 transition"
+            >Contact</a
+          >
+        </div>
+        <!-- Mobile Menu Button -->
+        <button
+          type="button"
+          aria-label="Open mobile menu"
+          title="Open mobile menu"
+          class="md:hidden text-white focus:outline-none"
+        >
+          <span class="sr-only">Open mobile menu</span>
+          <svg
+            aria-hidden="true"
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Main Content Wrapper -->
+    <main class="flex-grow py-16">
+      <div class="container mx-auto px-4 max-w-5xl">
+        <!-- Page Header -->
+        <div class="text-center mb-16">
+          <span
+            class="bg-red-600 text-white px-4 py-1 text-sm font-bold uppercase rounded-full mb-3 inline-block tracking-wider"
+          >
+            Operational Handover Guide
+          </span>
+          <h2
+            class="text-4xl md:text-5xl font-extrabold uppercase tracking-tight"
+          >
+            Digital Handover: Updating Your Site
+          </h2>
+          <p class="text-gray-600 mt-3 max-w-xl mx-auto">
+            This page is an illustrative guide to demonstrate how your club can
+            manage updates. It compares the modern, maintenance-free model
+            (Approach A) with a standard coding model (Approach B).
+          </p>
+        </div>
+
+        <!-- Split Grid Layout -->
+        <div class="grid md:grid-cols-2 gap-8 md:gap-12">
+          <!-- LEFT COLUMN: Manual Coding Example (Approach B) -->
+          <div class="space-y-6">
+            <div
+              class="bg-white p-8 rounded-lg shadow-sm border border-gray-200"
+            >
+              <div
+                class="w-12 h-12 bg-red-100 text-red-600 rounded-full flex items-center justify-center font-bold mb-4"
+              >
+                A
+              </div>
+              <h3 class="text-2xl font-bold uppercase mb-2 text-black">
+                APPROACH B: Manual Coding
+              </h3>
+              <p class="text-gray-600 mb-6 text-sm">
+                Best for: Teams with coding knowledge, or for making structural
+                news changes (like policy updates).
+              </p>
+              <p class="text-gray-600 mb-6 text-sm">
+                For this model, your team would need to edit the raw HTML code
+                in this file to add new table rows.
+              </p>
+
+              <h4 class="font-bold uppercase text-black text-lg mb-3">
+                Gym & Fight Updates (Manual Table)
+              </h4>
+
+              <!-- Updates Table with Interactive Demo -->
+              <div
+                class="bg-gray-50 border border-gray-100 rounded p-4 mb-6 text-sm"
+              >
+                <table class="w-full text-left border-collapse">
+                  <thead>
+                    <tr
+                      class="text-xs uppercase text-gray-500 font-bold border-b border-gray-200"
+                    >
+                      <th class="p-2">Date</th>
+                      <th class="p-2">Category</th>
+                      <th class="p-2">Update</th>
+                      <th class="p-2">Details</th>
+                    </tr>
+                  </thead>
+                  <tbody
+                    id="updates-table-tbody"
+                    class="divide-y divide-gray-100"
+                  >
+                    <!-- Existing rows... -->
+                    <tr>
+                      <td class="p-2">2023-11-20</td>
+                      <td class="p-2">
+                        <span
+                          class="bg-red-100 text-red-800 text-xs font-bold px-2 py-0.5 rounded"
+                          >FIGHT RESULT</span
+                        >
+                      </td>
+                      <td class="p-2">Junior London ABAs</td>
+                      <td class="p-2">
+                        Alex Petrov wins by TKO in Round 2. Champion! 🥊
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="p-2">2023-11-15</td>
+                      <td class="p-2">
+                        <span
+                          class="bg-gray-100 text-gray-800 text-xs font-bold px-2 py-0.5 rounded"
+                          >GYM NEWS</span
+                        >
+                      </td>
+                      <td class="p-2">Closed for Bank Holiday</td>
+                      <td class="p-2">
+                        Gym will be closed this Monday. Open Tuesday!
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- Interactive Demo Button -->
+              <button
+                type="button"
+                onclick="demoAddRow()"
+                class="w-full bg-red-600 text-white text-center font-bold uppercase py-3 rounded hover:bg-red-700 transition flex items-center justify-center gap-2 shadow-sm"
+              >
+                DEMO: Add a Victory Row!
+              </button>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN: Embedded Feed Strategy (Approach A) -->
+          <div class="space-y-6">
+            <div
+              class="bg-white p-8 rounded-lg shadow-sm border border-gray-200"
+            >
+              <div
+                class="w-12 h-12 bg-gray-100 text-black rounded-full flex items-center justify-center font-bold mb-4"
+              >
+                B
+              </div>
+              <h3 class="text-2xl font-bold uppercase mb-2 text-black">
+                APPROACH A: Live Feed (Maintenance-Free)
+              </h3>
+              <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                Best for: Fast-moving teams focused on training. This model
+                allows coaches to manage updates entirely from their phones,
+                without needing code.
+              </p>
+
+              <!-- PREVIEW Visual: Social Media Workflow (Simulated Feed from image_0.png) -->
+              <div
+                class="w-full h-48 bg-gray-200 rounded flex items-center justify-center text-xs text-gray-400 font-bold uppercase tracking-wider border-2 border-dashed border-gray-300 mb-6"
+              >
+                [ Live Instagram Feed (PREVIEW) - Connects on account launch ]
+              </div>
+
+              <h4 class="font-bold uppercase text-black text-sm mb-3">
+                Workflow for Approaches A & B
+              </h4>
+              <p class="text-gray-600 mb-6 text-sm">
+                For the live feed approach, your team uses pre-made Canva
+                templates on their phones. Posts instantly sync to the website.
+                No maintenance required.
+              </p>
+              <ul class="space-y-3 text-sm text-gray-700 list-decimal pl-5">
+                <li>Edit provided Canva template on your phone.</li>
+                <li>Drop in fight result photo & edit text.</li>
+                <li>Post to Instagram/Facebook.</li>
+                <li>The feed below automatically updates!</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer (Same as image_0.png) -->
+    <footer class="bg-black text-gray-400 py-12 border-t border-gray-800">
+      <div class="container mx-auto px-4 grid md:grid-cols-3 gap-8 text-sm">
+        <div>
+          <h4 class="text-white text-lg font-bold uppercase mb-4">
+            Hercules Boxing Club
+          </h4>
+          <p class="mb-4">
+            A registered Community Interest Company (CIC). Building champions in
+            and out of the ring.
+          </p>
+          <div class="flex space-x-6 text-white mt-4">
+            <!-- Instagram Logo -->
+            <a
+              href="#"
+              aria-label="Instagram"
+              title="Instagram launching soon"
+              class="text-gray-400 hover:text-red-500 transition-colors duration-300"
+            >
+              <span class="sr-only">Instagram</span>
+              <svg
+                aria-hidden="true"
+                class="w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+            <!-- TikTok Logo -->
+            <a
+              href="#"
+              aria-label="TikTok"
+              title="TikTok launching soon"
+              class="text-gray-400 hover:text-red-500 transition-colors duration-300"
+            >
+              <span class="sr-only">TikTok</span>
+              <svg
+                aria-hidden="true"
+                class="w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"
+                />
+              </svg>
+            </a>
+            <!-- Twitter / X Logo -->
+            <a
+              href="#"
+              aria-label="Twitter"
+              title="X (Twitter) launching soon"
+              class="text-gray-400 hover:text-red-500 transition-colors duration-300"
+            >
+              <span class="sr-only">Twitter / X</span>
+              <svg
+                aria-hidden="true"
+                class="w-5 h-5 mt-0.5"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 22.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-white text-lg font-bold uppercase mb-4">Location</h4>
+          <p>1a Hercules Street<br />Islington, London<br />N7 6AT</p>
+        </div>
+        <div>
+          <h4 class="text-white text-lg font-bold uppercase mb-4">
+            Important Links
+          </h4>
+          <ul class="space-y-2">
+            <li>
+              <a href="safeguarding.html" class="hover:text-red-500 transition"
+                >Safeguarding Policy</a
+              >
+            </li>
+            <li>
+              <a href="contact.html" class="hover:text-red-500 transition"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JS for Mobile Menu -->
+    <script src="js/main.js"></script>
+
+    <!-- DEMO JS Script for updates-2.html -->
+    <script>
+      function demoAddRow() {
+        // Get the table body
+        const tbody = document.getElementById("updates-table-tbody");
+
+        // Create a new row HTML string (A template a coach would copy)
+        const newRowHtml =
+          `
+                <tr>
+                    <td class="p-2 text-red-600 font-bold">` +
+          new Date().toISOString().split("T")[0] +
+          `</td>
+                    <td class="p-2"><span class="bg-red-100 text-red-800 text-xs font-bold px-2 py-0.5 rounded">DEMO WIN</span></td>
+                    <td class="p-2">Mock Victory - Round 3 TKO</td>
+                    <td class="p-2">This is an illustrative victory row. A coach would copy the HTML code to add this permanently.</td>
+                </tr>
+            `;
+
+        // Add the new row to the top of the table
+        tbody.insertAdjacentHTML("afterbegin", newRowHtml);
+      }
+    </script>
+  </body>
+</html>
