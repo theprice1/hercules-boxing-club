@@ -22,9 +22,21 @@
       }
     </style>
   </head>
-  <body class="bg-gray-50 text-gray-900 flex flex-col min-h-screen">
+  <!-- 1. Transparent Body -->
+  <body class="bg-transparent text-gray-900 flex flex-col min-h-screen">
+    <!-- 2. Fixed Background (Amateur Boxing Image) -->
+    <div class="fixed inset-0 z-[-1]">
+      <img
+        src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=1920&q=80"
+        alt="Amateur Boxing Gym"
+        class="w-full h-full object-cover"
+      />
+      <!-- Lightened overlay (40%) -->
+      <div class="absolute inset-0 bg-white/40"></div>
+    </div>
+
     <!-- Navigation Bar -->
-    <nav class="bg-black text-white p-4 sticky top-0 z-50">
+    <nav class="bg-black text-white p-4 sticky top-0 z-50 shadow-md">
       <div class="container mx-auto flex justify-between items-center relative">
         <h1 class="text-2xl font-bold tracking-tight uppercase">
           Hercules Boxing Club
@@ -79,32 +91,34 @@
 
     <!-- Main Content Wrapper -->
     <main class="flex-grow py-16">
-      <div class="container mx-auto px-4 max-w-4xl">
-        <!-- Page Header -->
-        <div class="text-center mb-16">
+      <div class="container mx-auto px-4 max-w-4xl relative z-10">
+        <!-- Page Header (Frosted Glass) -->
+        <div
+          class="text-center mb-16 bg-white/50 backdrop-blur-sm py-6 px-4 rounded-xl shadow-sm border border-white/60"
+        >
           <span
             class="bg-red-600 text-white px-4 py-1 text-sm font-bold uppercase rounded-full mb-3 inline-block tracking-wider"
           >
             Noticeboard
           </span>
           <h2
-            class="text-4xl md:text-5xl font-extrabold uppercase tracking-tight"
+            class="text-4xl md:text-5xl font-extrabold uppercase tracking-tight text-black"
           >
             Gym News & Results
           </h2>
-          <p class="text-gray-600 mt-3 max-w-xl mx-auto">
+          <p class="text-gray-900 font-semibold mt-3 max-w-xl mx-auto">
             The latest fight results, timetable changes, and club announcements.
           </p>
         </div>
 
-        <!-- Manual Updates Table (Approach B) -->
+        <!-- Manual Updates Table (Frosted Glass Approach B) -->
         <div
-          class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200"
+          class="bg-white/80 backdrop-blur-md rounded-lg shadow-lg overflow-hidden border border-gray-200"
         >
           <div class="overflow-x-auto">
             <table class="w-full text-left border-collapse">
               <thead>
-                <tr class="bg-black text-white uppercase text-sm">
+                <tr class="bg-black/90 text-white uppercase text-sm">
                   <th class="p-4 w-32">Date</th>
                   <th class="p-4 w-40">Category</th>
                   <th class="p-4">Headline / Details</th>
@@ -112,11 +126,11 @@
               </thead>
               <tbody class="divide-y divide-gray-200 text-sm">
                 <!-- Row 1: Fight Result -->
-                <tr class="hover:bg-gray-50 transition">
-                  <td class="p-4 font-bold text-gray-800">2026-08-22</td>
+                <tr class="hover:bg-white/90 transition">
+                  <td class="p-4 font-bold text-gray-900">2026-08-22</td>
                   <td class="p-4">
                     <span
-                      class="bg-red-100 text-red-800 text-xs font-bold px-2.5 py-0.5 rounded uppercase tracking-wide"
+                      class="bg-red-100 text-red-800 text-xs font-bold px-2.5 py-0.5 rounded uppercase tracking-wide shadow-sm"
                       >Fight Result</span
                     >
                   </td>
@@ -124,7 +138,7 @@
                     <p class="font-bold text-black text-base mb-1">
                       Junior London ABAs Victory
                     </p>
-                    <p class="text-gray-600">
+                    <p class="text-gray-800 font-medium">
                       Massive win for our Junior captain, stopping their
                       opponent in the 2nd round. Champion in the making!
                     </p>
@@ -132,11 +146,11 @@
                 </tr>
 
                 <!-- Row 2: Gym News -->
-                <tr class="hover:bg-gray-50 transition">
-                  <td class="p-4 font-bold text-gray-800">2026-08-15</td>
+                <tr class="hover:bg-white/90 transition">
+                  <td class="p-4 font-bold text-gray-900">2026-08-15</td>
                   <td class="p-4">
                     <span
-                      class="bg-gray-200 text-gray-800 text-xs font-bold px-2.5 py-0.5 rounded uppercase tracking-wide"
+                      class="bg-gray-200 text-gray-800 text-xs font-bold px-2.5 py-0.5 rounded uppercase tracking-wide shadow-sm"
                       >Gym News</span
                     >
                   </td>
@@ -144,7 +158,7 @@
                     <p class="font-bold text-black text-base mb-1">
                       Bank Holiday Weekend Closure
                     </p>
-                    <p class="text-gray-600">
+                    <p class="text-gray-800 font-medium">
                       The gym will be closed this upcoming Bank Holiday Monday.
                       Enjoy the rest, champions! Standard timetable resumes
                       Tuesday.
@@ -153,11 +167,11 @@
                 </tr>
 
                 <!-- Row 3: Event -->
-                <tr class="hover:bg-gray-50 transition">
-                  <td class="p-4 font-bold text-gray-800">2026-08-01</td>
+                <tr class="hover:bg-white/90 transition">
+                  <td class="p-4 font-bold text-gray-900">2026-08-01</td>
                   <td class="p-4">
                     <span
-                      class="bg-black text-white text-xs font-bold px-2.5 py-0.5 rounded uppercase tracking-wide"
+                      class="bg-black text-white text-xs font-bold px-2.5 py-0.5 rounded uppercase tracking-wide shadow-sm"
                       >Event</span
                     >
                   </td>
@@ -165,7 +179,7 @@
                     <p class="font-bold text-black text-base mb-1">
                       England Boxing Affiliation Update
                     </p>
-                    <p class="text-gray-600">
+                    <p class="text-gray-800 font-medium">
                       Our CIC paperwork is officially submitted. We are one step
                       closer to full national competition clearance for all
                       carded boxers.
@@ -177,7 +191,10 @@
           </div>
         </div>
 
-        <div class="mt-6 text-center text-sm text-gray-500">
+        <!-- Coach Note (Frosted Glass) -->
+        <div
+          class="mt-6 bg-white/70 backdrop-blur-md p-4 rounded-lg shadow-sm border border-gray-200 text-center text-sm text-gray-900 font-medium"
+        >
           <p>
             *(Coach Note: To add new updates, edit this file in GitHub and copy
             an existing table row.)*
@@ -200,6 +217,7 @@
             and out of the ring.
           </p>
           <div class="flex space-x-6 text-white mt-4">
+            <!-- Instagram Logo -->
             <a
               href="#"
               aria-label="Instagram"
@@ -220,6 +238,7 @@
                 />
               </svg>
             </a>
+            <!-- TikTok Logo -->
             <a
               href="#"
               aria-label="TikTok"
@@ -238,6 +257,7 @@
                 />
               </svg>
             </a>
+            <!-- Twitter / X Logo -->
             <a
               href="#"
               aria-label="Twitter"

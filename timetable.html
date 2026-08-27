@@ -22,9 +22,22 @@
       }
     </style>
   </head>
-  <body class="bg-gray-50 text-gray-900 flex flex-col min-h-screen">
+  <!-- 1. Transparent Body -->
+  <body class="bg-transparent text-gray-900 flex flex-col min-h-screen">
+    <!-- 2. Fixed Background (Amateur Boxing Image) -->
+    <div class="fixed inset-0 z-[-1]">
+      <!-- Authentic Boxing Ring Image -->
+      <img
+        src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=1920&q=80"
+        alt="Amateur Boxing Gym"
+        class="w-full h-full object-cover"
+      />
+      <!-- Lightened overlay (40%) -->
+      <div class="absolute inset-0 bg-white/40"></div>
+    </div>
+
     <!-- Navigation Bar -->
-    <nav class="bg-black text-white p-4 sticky top-0 z-50">
+    <nav class="bg-black text-white p-4 sticky top-0 z-50 shadow-md">
       <div class="container mx-auto flex justify-between items-center">
         <h1 class="text-2xl font-bold tracking-tight uppercase">
           Hercules Boxing Club
@@ -76,65 +89,73 @@
 
     <!-- Main Content Wrapper -->
     <main class="flex-grow py-16">
-      <div class="container mx-auto px-4 max-w-5xl">
-        <!-- Page Header -->
-        <div class="text-center mb-12">
+      <div class="container mx-auto px-4 max-w-5xl relative z-10">
+        <!-- Page Header (Frosted Glass) -->
+        <div
+          class="text-center mb-12 bg-white/50 backdrop-blur-sm py-6 px-4 rounded-xl shadow-sm border border-white/60"
+        >
           <span
             class="bg-red-600 text-white px-4 py-1 text-sm font-bold uppercase rounded-full mb-3 inline-block tracking-wider"
           >
             Training Schedule
           </span>
           <h2
-            class="text-4xl md:text-5xl font-extrabold uppercase tracking-tight"
+            class="text-4xl md:text-5xl font-extrabold uppercase tracking-tight text-black"
           >
             Gym Timetable
           </h2>
-          <p class="text-gray-600 mt-3 max-w-xl mx-auto">
+          <p class="text-gray-900 font-semibold mt-3 max-w-xl mx-auto">
             Whether you're stepping into the ring for fitness, youth
             development, or elite competition training, we have a session for
             you.
           </p>
         </div>
 
-        <!-- Squad Legend Cards -->
+        <!-- Squad Legend Cards (Frosted Glass with Fixed Borders) -->
         <div class="grid md:grid-cols-3 gap-6 mb-12">
           <div
-            class="bg-white p-6 rounded-lg border-l-4 border-red-600 shadow-sm"
+            class="bg-white/80 backdrop-blur-md p-6 rounded-lg border border-gray-200 border-l-4 border-l-red-600 shadow-md transition hover:shadow-lg hover:-translate-y-1 duration-300"
           >
-            <h3 class="font-bold text-lg uppercase mb-1">Junior Squad</h3>
-            <p class="text-sm text-gray-600">
+            <h3 class="font-bold text-lg uppercase mb-1 text-black">
+              Junior Squad
+            </h3>
+            <p class="text-sm text-gray-800 font-medium">
               Focused on discipline, fitness, and fundamentals for younger
               members.
             </p>
           </div>
           <div
-            class="bg-white p-6 rounded-lg border-l-4 border-black shadow-sm"
+            class="bg-white/80 backdrop-blur-md p-6 rounded-lg border border-gray-200 border-l-4 border-l-black shadow-md transition hover:shadow-lg hover:-translate-y-1 duration-300"
           >
-            <h3 class="font-bold text-lg uppercase mb-1">Senior & Fitness</h3>
-            <p class="text-sm text-gray-600">
+            <h3 class="font-bold text-lg uppercase mb-1 text-black">
+              Senior & Fitness
+            </h3>
+            <p class="text-sm text-gray-800 font-medium">
               Open to all skill levels. High-intensity conditioning and
               technical boxing skills.
             </p>
           </div>
           <div
-            class="bg-white p-6 rounded-lg border-l-4 border-red-600 shadow-sm"
+            class="bg-white/80 backdrop-blur-md p-6 rounded-lg border border-gray-200 border-l-4 border-l-red-600 shadow-md transition hover:shadow-lg hover:-translate-y-1 duration-300"
           >
-            <h3 class="font-bold text-lg uppercase mb-1">Competitive Squad</h3>
-            <p class="text-sm text-gray-600">
+            <h3 class="font-bold text-lg uppercase mb-1 text-black">
+              Competitive Squad
+            </h3>
+            <p class="text-sm text-gray-800 font-medium">
               Strictly for carded or transition-ready boxers preparing for
               official bouts.
             </p>
           </div>
         </div>
 
-        <!-- Timetable Grid Table -->
+        <!-- Timetable Grid Table (Frosted Glass) -->
         <div
-          class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200"
+          class="bg-white/80 backdrop-blur-md rounded-lg shadow-lg overflow-hidden border border-gray-200"
         >
           <div class="overflow-x-auto">
             <table class="w-full text-left border-collapse">
               <thead>
-                <tr class="bg-black text-white uppercase text-sm">
+                <tr class="bg-black/90 text-white uppercase text-sm">
                   <th class="p-4">Day</th>
                   <th class="p-4">Time</th>
                   <th class="p-4">Session Type</th>
@@ -142,73 +163,81 @@
                 </tr>
               </thead>
               <tbody class="divide-y divide-gray-200 text-sm">
-                <tr class="hover:bg-gray-50">
+                <tr class="hover:bg-white/90 transition">
                   <td class="p-4 font-bold text-black">Monday</td>
-                  <td class="p-4 text-gray-600">17:00 - 18:30</td>
+                  <td class="p-4 text-gray-800 font-medium">17:00 - 18:30</td>
                   <td class="p-4">
                     <span
-                      class="bg-red-100 text-red-800 text-xs font-bold px-2.5 py-0.5 rounded"
+                      class="bg-red-100 text-red-800 text-xs font-bold px-2.5 py-0.5 rounded shadow-sm"
                       >Junior Squad</span
                     >
                   </td>
-                  <td class="p-4 text-gray-600">Fundamentals & Footwork</td>
+                  <td class="p-4 text-gray-800 font-medium">
+                    Fundamentals & Footwork
+                  </td>
                 </tr>
-                <tr class="hover:bg-gray-50">
+                <tr class="hover:bg-white/90 transition">
                   <td class="p-4 font-bold text-black">Monday</td>
-                  <td class="p-4 text-gray-600">19:00 - 20:30</td>
+                  <td class="p-4 text-gray-800 font-medium">19:00 - 20:30</td>
                   <td class="p-4">
                     <span
-                      class="bg-gray-100 text-gray-800 text-xs font-bold px-2.5 py-0.5 rounded"
+                      class="bg-gray-200 text-gray-800 text-xs font-bold px-2.5 py-0.5 rounded shadow-sm"
                       >Senior & Fitness</span
                     >
                   </td>
-                  <td class="p-4 text-gray-600">
+                  <td class="p-4 text-gray-800 font-medium">
                     Conditioning & Sparring Prep
                   </td>
                 </tr>
-                <tr class="hover:bg-gray-50">
+                <tr class="hover:bg-white/90 transition">
                   <td class="p-4 font-bold text-black">Wednesday</td>
-                  <td class="p-4 text-gray-600">17:00 - 18:30</td>
+                  <td class="p-4 text-gray-800 font-medium">17:00 - 18:30</td>
                   <td class="p-4">
                     <span
-                      class="bg-red-100 text-red-800 text-xs font-bold px-2.5 py-0.5 rounded"
+                      class="bg-red-100 text-red-800 text-xs font-bold px-2.5 py-0.5 rounded shadow-sm"
                       >Junior Squad</span
                     >
                   </td>
-                  <td class="p-4 text-gray-600">Bag Work & Combinations</td>
+                  <td class="p-4 text-gray-800 font-medium">
+                    Bag Work & Combinations
+                  </td>
                 </tr>
-                <tr class="hover:bg-gray-50">
+                <tr class="hover:bg-white/90 transition">
                   <td class="p-4 font-bold text-black">Wednesday</td>
-                  <td class="p-4 text-gray-600">19:00 - 20:30</td>
+                  <td class="p-4 text-gray-800 font-medium">19:00 - 20:30</td>
                   <td class="p-4">
                     <span
-                      class="bg-red-800 text-white text-xs font-bold px-2.5 py-0.5 rounded"
+                      class="bg-red-800 text-white text-xs font-bold px-2.5 py-0.5 rounded shadow-sm"
                       >Competitive Squad</span
                     >
                   </td>
-                  <td class="p-4 text-gray-600">Advanced Sparring & Tactics</td>
+                  <td class="p-4 text-gray-800 font-medium">
+                    Advanced Sparring & Tactics
+                  </td>
                 </tr>
-                <tr class="hover:bg-gray-50">
+                <tr class="hover:bg-white/90 transition">
                   <td class="p-4 font-bold text-black">Friday</td>
-                  <td class="p-4 text-gray-600">17:30 - 19:00</td>
+                  <td class="p-4 text-gray-800 font-medium">17:30 - 19:00</td>
                   <td class="p-4">
                     <span
-                      class="bg-gray-100 text-gray-800 text-xs font-bold px-2.5 py-0.5 rounded"
+                      class="bg-gray-200 text-gray-800 text-xs font-bold px-2.5 py-0.5 rounded shadow-sm"
                       >Senior & Fitness</span
                     >
                   </td>
-                  <td class="p-4 text-gray-600">Open Gym & Circuit Training</td>
+                  <td class="p-4 text-gray-800 font-medium">
+                    Open Gym & Circuit Training
+                  </td>
                 </tr>
-                <tr class="hover:bg-gray-50">
+                <tr class="hover:bg-white/90 transition">
                   <td class="p-4 font-bold text-black">Saturday</td>
-                  <td class="p-4 text-gray-600">11:00 - 13:00</td>
+                  <td class="p-4 text-gray-800 font-medium">11:00 - 13:00</td>
                   <td class="p-4">
                     <span
-                      class="bg-red-800 text-white text-xs font-bold px-2.5 py-0.5 rounded"
+                      class="bg-red-800 text-white text-xs font-bold px-2.5 py-0.5 rounded shadow-sm"
                       >Competitive Squad</span
                     >
                   </td>
-                  <td class="p-4 text-gray-600">
+                  <td class="p-4 text-gray-800 font-medium">
                     Match Simulation & Conditioning
                   </td>
                 </tr>
@@ -217,9 +246,9 @@
           </div>
         </div>
 
-        <!-- Callout Note -->
+        <!-- Callout Note (Frosted Glass with Fixed Borders) -->
         <div
-          class="mt-8 bg-gray-100 border-l-4 border-black p-4 text-sm text-gray-700"
+          class="mt-8 bg-white/70 backdrop-blur-md border border-gray-200 border-l-4 border-l-black p-4 text-sm text-gray-900 shadow-md rounded-r-lg"
         >
           <p>
             <strong>Note on Subsidies:</strong> Session fees are heavily
@@ -232,7 +261,9 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-black text-gray-400 py-12 border-t border-gray-800">
+    <footer
+      class="bg-black text-gray-400 py-12 border-t border-gray-800 mt-auto"
+    >
       <div class="container mx-auto px-4 grid md:grid-cols-3 gap-8 text-sm">
         <div>
           <h4 class="text-white text-lg font-bold uppercase mb-4">
@@ -246,15 +277,16 @@
             <!-- Instagram Logo -->
             <a
               href="#"
+              aria-label="Instagram"
               title="Instagram launching soon"
               class="text-gray-400 hover:text-red-500 transition-colors duration-300"
             >
               <span class="sr-only">Instagram</span>
               <svg
+                aria-hidden="true"
                 class="w-6 h-6"
                 fill="currentColor"
                 viewBox="0 0 24 24"
-                aria-hidden="true"
               >
                 <path
                   fill-rule="evenodd"
@@ -263,38 +295,38 @@
                 />
               </svg>
             </a>
-
             <!-- TikTok Logo -->
             <a
               href="#"
+              aria-label="TikTok"
               title="TikTok launching soon"
               class="text-gray-400 hover:text-red-500 transition-colors duration-300"
             >
               <span class="sr-only">TikTok</span>
               <svg
+                aria-hidden="true"
                 class="w-6 h-6"
                 fill="currentColor"
                 viewBox="0 0 24 24"
-                aria-hidden="true"
               >
                 <path
                   d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"
                 />
               </svg>
             </a>
-
             <!-- Twitter / X Logo -->
             <a
               href="#"
+              aria-label="Twitter"
               title="X (Twitter) launching soon"
               class="text-gray-400 hover:text-red-500 transition-colors duration-300"
             >
               <span class="sr-only">Twitter / X</span>
               <svg
+                aria-hidden="true"
                 class="w-5 h-5 mt-0.5"
                 fill="currentColor"
                 viewBox="0 0 24 24"
-                aria-hidden="true"
               >
                 <path
                   d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 22.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"

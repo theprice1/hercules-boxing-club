@@ -22,9 +22,21 @@
       }
     </style>
   </head>
-  <body class="bg-gray-50 text-gray-900 flex flex-col min-h-screen">
+  <!-- 1. Transparent Body -->
+  <body class="bg-transparent text-gray-900 flex flex-col min-h-screen">
+    <!-- 2. Fixed Background (Amateur Boxing Image) -->
+    <div class="fixed inset-0 z-[-1]">
+      <img
+        src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=1920&q=80"
+        alt="Amateur Boxing Gym"
+        class="w-full h-full object-cover"
+      />
+      <!-- Lightened overlay (40%) -->
+      <div class="absolute inset-0 bg-white/40"></div>
+    </div>
+
     <!-- Navigation Bar -->
-    <nav class="bg-black text-white p-4 sticky top-0 z-50">
+    <nav class="bg-black text-white p-4 sticky top-0 z-50 shadow-md">
       <div class="container mx-auto flex justify-between items-center">
         <h1 class="text-2xl font-bold tracking-tight uppercase">
           Hercules Boxing Club
@@ -76,37 +88,39 @@
 
     <!-- Main Content Wrapper -->
     <main class="flex-grow py-16">
-      <div class="container mx-auto px-4 max-w-5xl">
-        <!-- Page Header -->
-        <div class="text-center mb-16">
+      <div class="container mx-auto px-4 max-w-5xl relative z-10">
+        <!-- Page Header (Frosted Glass) -->
+        <div
+          class="text-center mb-12 bg-white/50 backdrop-blur-sm py-6 px-4 rounded-xl shadow-sm border border-white/60"
+        >
           <span
             class="bg-red-600 text-white px-4 py-1 text-sm font-bold uppercase rounded-full mb-3 inline-block tracking-wider"
           >
             Get In Touch
           </span>
           <h2
-            class="text-4xl md:text-5xl font-extrabold uppercase tracking-tight"
+            class="text-4xl md:text-5xl font-extrabold uppercase tracking-tight text-black"
           >
             Contact & Visit Us
           </h2>
-          <p class="text-gray-600 mt-3 max-w-xl mx-auto">
+          <p class="text-gray-900 font-semibold mt-3 max-w-xl mx-auto">
             Drop us an email, give us a call, or come down to the gym. We are
             always ready to welcome new faces.
           </p>
         </div>
 
         <!-- Split Grid Layout -->
-        <div class="grid md:grid-cols-2 gap-8 md:gap-12">
+        <div class="grid md:grid-cols-2 gap-8 md:gap-12 mb-12">
           <!-- LEFT COLUMN: Contact Routing & Action Buttons -->
           <div class="space-y-6">
-            <!-- 1. General Enquiries -->
+            <!-- 1. General Enquiries (Frosted Glass) -->
             <div
-              class="bg-white p-8 rounded-lg shadow-sm border border-gray-200"
+              class="bg-white/80 backdrop-blur-md p-8 rounded-lg shadow-md border border-gray-200"
             >
               <h3 class="text-2xl font-bold uppercase mb-2 text-black">
                 Train With Us
               </h3>
-              <p class="text-gray-600 mb-6 text-sm">
+              <p class="text-gray-800 font-medium mb-6 text-sm">
                 Want to join a squad, book a trial, or have questions about
                 session fees? Reach out directly to our coaching team.
               </p>
@@ -114,7 +128,7 @@
               <div class="flex flex-col space-y-3">
                 <a
                   href="mailto:info@herculesboxing.co.uk?subject=Gym%20Enquiry"
-                  class="w-full bg-black text-white text-center font-bold uppercase py-3.5 rounded hover:bg-gray-800 transition flex items-center justify-center gap-2 shadow-sm"
+                  class="w-full bg-black/90 backdrop-blur-md text-white text-center font-bold uppercase py-3.5 rounded hover:bg-gray-800 transition flex items-center justify-center gap-2 shadow-sm"
                 >
                   <svg
                     class="w-5 h-5"
@@ -133,10 +147,10 @@
                 </a>
                 <a
                   href="tel:+440000000000"
-                  class="w-full bg-white text-black border-2 border-gray-200 text-center font-bold uppercase py-3.5 rounded hover:bg-gray-50 transition flex items-center justify-center gap-2 shadow-sm"
+                  class="w-full bg-white/80 backdrop-blur-md text-black border-2 border-gray-300 text-center font-bold uppercase py-3.5 rounded hover:bg-gray-100 transition flex items-center justify-center gap-2 shadow-sm"
                 >
                   <svg
-                    class="w-5 h-5 text-gray-500"
+                    class="w-5 h-5 text-gray-600"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -153,30 +167,32 @@
               </div>
             </div>
 
-            <!-- 2. Funding & Partnerships -->
-            <div class="bg-black text-white p-8 rounded-lg shadow-sm">
+            <!-- 2. Funding & Partnerships (Dark Frosted Glass) -->
+            <div
+              class="bg-black/90 backdrop-blur-md text-white p-8 rounded-lg shadow-md border border-gray-800"
+            >
               <h3 class="text-xl font-bold uppercase mb-2">Funding & Grants</h3>
-              <p class="text-gray-400 text-sm leading-relaxed mb-6">
+              <p class="text-gray-300 text-sm leading-relaxed mb-6">
                 We welcome discussions with grant bodies and local authorities
                 to support Islington's youth.
               </p>
               <a
                 href="mailto:admin@herculesboxing.co.uk?subject=Partnership%20Enquiry"
-                class="w-full border-2 border-red-600 text-white text-center font-bold uppercase py-3 rounded hover:bg-red-600 transition block"
+                class="w-full border-2 border-red-600 text-white text-center font-bold uppercase py-3 rounded hover:bg-red-600 transition block shadow-sm"
               >
                 Contact Administration
               </a>
             </div>
 
-            <!-- 3. Welfare Routing -->
+            <!-- 3. Welfare Routing (Frosted Glass with Fixed Border) -->
             <div
-              class="bg-gray-100 p-6 rounded-lg border-l-4 border-red-600 flex justify-between items-center"
+              class="bg-white/70 backdrop-blur-md p-6 rounded-lg border border-gray-200 border-l-4 border-l-red-600 flex justify-between items-center shadow-sm"
             >
               <div>
                 <h4 class="font-bold uppercase text-sm mb-1 text-black">
                   Safeguarding Team
                 </h4>
-                <p class="text-xs text-gray-600">
+                <p class="text-xs text-gray-800 font-medium">
                   Raise a confidential concern.
                 </p>
               </div>
@@ -207,12 +223,12 @@
 
           <!-- RIGHT COLUMN: Location Map & First-Timer Guide -->
           <div class="space-y-6">
-            <!-- Google Map Card -->
+            <!-- Google Map Card (Frosted Glass) -->
             <div
-              class="bg-white p-2 rounded-lg shadow-sm border border-gray-200"
+              class="bg-white/80 backdrop-blur-md p-2 rounded-lg shadow-md border border-gray-200"
             >
               <div
-                class="w-full h-64 bg-gray-200 rounded overflow-hidden relative"
+                class="w-full h-64 bg-gray-200 rounded overflow-hidden relative shadow-inner"
               >
                 <iframe
                   title="Hercules Boxing Club Location Map"
@@ -227,23 +243,23 @@
                 <p class="font-bold text-black uppercase text-lg">
                   1a Hercules Street
                 </p>
-                <p class="text-gray-600">Islington, London, N7 6AT</p>
+                <p class="text-gray-800 font-medium">
+                  Islington, London, N7 6AT
+                </p>
               </div>
             </div>
 
-            <!-- First Timer Guide -->
+            <!-- First Timer Guide (Frosted Glass) -->
             <div
-              class="bg-white p-6 rounded-lg shadow-sm border border-gray-200"
+              class="bg-white/80 backdrop-blur-md p-6 rounded-lg shadow-md border border-gray-200 border-l-4 border-l-black"
             >
-              <h3
-                class="text-lg font-bold uppercase mb-4 text-black border-l-4 border-black pl-3"
-              >
+              <h3 class="text-lg font-bold uppercase mb-4 text-black pl-1">
                 First Time Visiting?
               </h3>
-              <ul class="space-y-4 text-sm text-gray-700">
+              <ul class="space-y-4 text-sm text-gray-800 font-medium">
                 <li class="flex gap-3">
-                  <span class="text-red-600 mt-0.5"
-                    ><svg
+                  <span class="text-red-600 mt-0.5">
+                    <svg
                       aria-hidden="true"
                       class="w-5 h-5"
                       fill="none"
@@ -255,17 +271,18 @@
                         stroke-linejoin="round"
                         stroke-width="2"
                         d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                      ></path></svg
-                  ></span>
+                      ></path>
+                    </svg>
+                  </span>
                   <div>
-                    <strong>What to bring:</strong> Comfortable training gear, a
-                    water bottle, and hand wraps if you have them. We provide
-                    the gloves!
+                    <strong class="text-black">What to bring:</strong>
+                    Comfortable training gear, a water bottle, and hand wraps if
+                    you have them. We provide the gloves!
                   </div>
                 </li>
                 <li class="flex gap-3">
-                  <span class="text-red-600 mt-0.5"
-                    ><svg
+                  <span class="text-red-600 mt-0.5">
+                    <svg
                       aria-hidden="true"
                       class="w-5 h-5"
                       fill="none"
@@ -277,16 +294,18 @@
                         stroke-linejoin="round"
                         stroke-width="2"
                         d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                      ></path></svg
-                  ></span>
+                      ></path>
+                    </svg>
+                  </span>
                   <div>
-                    <strong>When to arrive:</strong> Please arrive 15 minutes
-                    before your first session to register and chat with a coach.
+                    <strong class="text-black">When to arrive:</strong> Please
+                    arrive 15 minutes before your first session to register and
+                    chat with a coach.
                   </div>
                 </li>
                 <li class="flex gap-3">
-                  <span class="text-red-600 mt-0.5"
-                    ><svg
+                  <span class="text-red-600 mt-0.5">
+                    <svg
                       aria-hidden="true"
                       class="w-5 h-5"
                       fill="none"
@@ -298,11 +317,13 @@
                         stroke-linejoin="round"
                         stroke-width="2"
                         d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-                      ></path></svg
-                  ></span>
+                      ></path>
+                    </svg>
+                  </span>
                   <div>
-                    <strong>Under 18?</strong> A parent or guardian must be
-                    present to sign your initial membership waiver.
+                    <strong class="text-black">Under 18?</strong> A parent or
+                    guardian must be present to sign your initial membership
+                    waiver.
                   </div>
                 </li>
               </ul>
@@ -313,7 +334,9 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-black text-gray-400 py-12 border-t border-gray-800">
+    <footer
+      class="bg-black text-gray-400 py-12 border-t border-gray-800 mt-auto"
+    >
       <div class="container mx-auto px-4 grid md:grid-cols-3 gap-8 text-sm">
         <div>
           <h4 class="text-white text-lg font-bold uppercase mb-4">
