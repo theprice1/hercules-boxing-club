@@ -115,3 +115,30 @@ collections:
                   widget: "string",
                   required: false,
                 }
+  - name: "safeguarding_data"
+    label: "Safeguarding"
+    files:
+      - label: "Policy & Welfare Contacts"
+        name: "safeguarding"
+        file: "data/safeguarding.json"
+        fields:
+          - label: "Welfare Officer Name"
+            name: "officer_name"
+            widget: "string"
+            hint: "e.g., Jane Doe"
+          - label: "Welfare Officer Email"
+            name: "officer_email"
+            widget: "string"
+            hint: "e.g., safeguarding@herculesboxing.co.uk"
+          - label: "Welfare Officer Phone"
+            name: "officer_phone"
+            widget: "string"
+            hint: "e.g., Available on Request or phone number"
+          - label: "Core Commitment Text"
+            name: "commitment_body"
+            widget: "markdown"
+            hint: "Describe the club's core commitment to child protection and inclusion."
+          - label: "Reporting Procedure Text"
+            name: "reporting_body"
+            widget: "markdown"
+            hint: "Step-by-step instructions on what to do if a concern is raised."
