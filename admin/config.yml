@@ -7,9 +7,9 @@ public_folder: "/images/uploads"
 
 collections:
   - name: "news_data"
-    label: "News & Updates"
+    label: "News"
     files:
-      - label: "All News Articles"
+      - label: "News Articles"
         name: "articles"
         file: "data/news.json"
         fields:
@@ -36,7 +36,7 @@ collections:
   - name: "fight_results_data"
     label: "Fight Results"
     files:
-      - label: "All Fight Results"
+      - label: "Fight Results Ledger"
         name: "results"
         file: "data/fight-results.json"
         fields:
@@ -76,7 +76,7 @@ collections:
                 }
 
   - name: "timetable_data"
-    label: "Training Timetable"
+    label: "Timetable"
     files:
       - label: "Class Schedule"
         name: "schedule"

@@ -1,0 +1,74 @@
+{
+  "items": [
+    {
+      "title": "Mini-Cubs Boxing (Ages 6-9)",
+      "day": "Monday",
+      "time": "4:30 PM - 5:15 PM",
+      "coach": "Youth Coach",
+      "description": "Fun, engaging introduction to coordination, agility, and fundamental movement for kids."
+    },
+    {
+      "title": "Junior Boxing Development (Ages 10-15)",
+      "day": "Monday",
+      "time": "5:30 PM - 6:30 PM",
+      "coach": "Head Coach",
+      "description": "Fundamental stance, footwork, bag work, and physical conditioning for youth members."
+    },
+    {
+      "title": "Senior Competitive Squad",
+      "day": "Tuesday",
+      "time": "7:00 PM - 8:30 PM",
+      "coach": "Coaching Team",
+      "description": "Advanced technical drills, pad work, tactical sparring preparation, and elite conditioning."
+    },
+    {
+      "title": "Women's Boxing & Fitness",
+      "day": "Wednesday",
+      "time": "6:00 PM - 7:00 PM",
+      "coach": "Guest Coach",
+      "description": "High-energy boxing circuits, pad work, and core conditioning suited for all fitness levels."
+    },
+    {
+      "title": "Cardio Boxing Circuits",
+      "day": "Wednesday",
+      "time": "7:30 PM - 8:30 PM",
+      "coach": "Fitness Coach",
+      "description": "Intense fat-burning circuit training incorporating skipping, bodyweight movements, and heavy bags."
+    },
+    {
+      "title": "Sparring & Technical Masterclass",
+      "day": "Thursday",
+      "time": "7:00 PM - 8:30 PM",
+      "coach": "Head Coach",
+      "description": "Controlled technical sparring and defensive strategy sessions for carded boxers."
+    },
+    {
+      "title": "Open Gym & Conditioning",
+      "day": "Friday",
+      "time": "5:30 PM - 7:00 PM",
+      "coach": "Staff Supervised",
+      "description": "Open floor access for members to work on individualized strength and conditioning routines."
+    },
+    {
+      "title": "Technical Footwork & Bag Clinic",
+      "day": "Friday",
+      "time": "7:00 PM - 8:00 PM",
+      "coach": "Assistant Coach",
+      "description": "Deep dive into angles, pivot mechanics, and heavy bag power generation."
+    },
+    {
+      "title": "Saturday Morning Heavy Squad",
+      "day": "Saturday",
+      "time": "10:00 AM - 11:30 AM",
+      "coach": "Full Coaching Staff",
+      "description": "Intensive weekend training session focusing on championship rounds and ring IQ."
+    },
+    {
+      "title": "Sunday Morning Roadwork & Core",
+      "day": "Sunday",
+      "time": "9:00 AM - 10:15 AM",
+      "coach": "Conditioning Staff",
+      "description": "Outdoor conditioning run followed by core strength work to build endurance."
+    }
+  ]
+}
