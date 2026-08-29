@@ -1,13 +1,6 @@
-backend:
-  name: git-gateway
-  branch: main
-
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
-
 collections:
   - name: "news_data"
-    label: "News & Fight Results"
+    label: "News & Updates"
     files:
       - label: "All News Articles"
         name: "articles"
@@ -32,3 +25,47 @@ collections:
                   required: false,
                 }
               - { label: "Story Content", name: "body", widget: "markdown" }
+
+  - name: "fight_results_data"
+    label: "Fight Results"
+    files:
+      - label: "All Fight Results"
+        name: "results"
+        file: "data/fight-results.json"
+        fields:
+          - label: "Fights"
+            name: "items"
+            widget: "list"
+            fields:
+              - {
+                  label: "Boxer Name / Match Title",
+                  name: "title",
+                  widget: "string",
+                  hint: "e.g., J. Smith vs Opponent (London ABAs)",
+                }
+              - {
+                  label: "Fight Date",
+                  name: "date",
+                  widget: "datetime",
+                  date_format: "DD MMM YYYY",
+                  time_format: false,
+                }
+              - {
+                  label: "Result Outcome",
+                  name: "outcome",
+                  widget: "select",
+                  options:
+                    [
+                      "Win (KO/TKO)",
+                      "Win (Points)",
+                      "Loss",
+                      "Draw",
+                      "Exhibition / Skills Bout",
+                    ],
+                }
+              - {
+                  label: "Match Summary & Details",
+                  name: "body",
+                  widget: "markdown",
+                  hint: "Describe the round, opponent gym, and performance details.",
+                }
