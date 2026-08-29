@@ -115,10 +115,11 @@ collections:
                   widget: "string",
                   required: false,
                 }
+
   - name: "safeguarding_data"
     label: "Safeguarding"
     files:
-      - label: "Policy & Welfare Contacts"
+      - label: "Full Safeguarding Policy"
         name: "safeguarding"
         file: "data/safeguarding.json"
         fields:
@@ -134,11 +135,23 @@ collections:
             name: "officer_phone"
             widget: "string"
             hint: "e.g., Available on Request or phone number"
-          - label: "Core Commitment Text"
+          - label: "1. Core Policy Commitment"
             name: "commitment_body"
             widget: "markdown"
-            hint: "Describe the club's core commitment to child protection and inclusion."
-          - label: "Reporting Procedure Text"
+            hint: "Our commitment to child protection, inclusion, and governing body alignment."
+          - label: "2. Safe Recruitment & Vetting Standards"
+            name: "recruitment_body"
+            widget: "markdown"
+            hint: "Details on DBS checks, coaching qualifications, and ratios."
+          - label: "3. Codes of Conduct"
+            name: "codes_body"
+            widget: "markdown"
+            hint: "Behavioral standards expected within the gym."
+          - label: "4. Reporting Concerns & Procedures"
             name: "reporting_body"
             widget: "markdown"
-            hint: "Step-by-step instructions on what to do if a concern is raised."
+            hint: "Step-by-step instructions on what to do if a disclosure or concern occurs."
+          - label: "5. Digital Safety & Photography Policy"
+            name: "digital_body"
+            widget: "markdown"
+            hint: "Rules regarding social media, video recording, and photography on site."
