@@ -1,0 +1,34 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "news_data"
+    label: "News & Fight Results"
+    files:
+      - label: "All News Articles"
+        name: "articles"
+        file: "data/news.json"
+        fields:
+          - label: "Articles"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Headline", name: "title", widget: "string" }
+              - {
+                  label: "Publish Date",
+                  name: "date",
+                  widget: "datetime",
+                  date_format: "DD MMM YYYY",
+                  time_format: false,
+                }
+              - {
+                  label: "Featured Image (Optional)",
+                  name: "image",
+                  widget: "image",
+                  required: false,
+                }
+              - { label: "Story Content", name: "body", widget: "markdown" }
