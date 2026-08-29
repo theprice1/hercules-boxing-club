@@ -1,3 +1,10 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
 collections:
   - name: "news_data"
     label: "News & Updates"
@@ -41,7 +48,6 @@ collections:
                   label: "Boxer Name / Match Title",
                   name: "title",
                   widget: "string",
-                  hint: "e.g., J. Smith vs Opponent (London ABAs)",
                 }
               - {
                   label: "Fight Date",
@@ -67,5 +73,45 @@ collections:
                   label: "Match Summary & Details",
                   name: "body",
                   widget: "markdown",
-                  hint: "Describe the round, opponent gym, and performance details.",
+                }
+
+  - name: "timetable_data"
+    label: "Training Timetable"
+    files:
+      - label: "Class Schedule"
+        name: "schedule"
+        file: "data/timetable.json"
+        fields:
+          - label: "Classes"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Class Name", name: "title", widget: "string" }
+              - {
+                  label: "Day of the Week",
+                  name: "day",
+                  widget: "select",
+                  options:
+                    [
+                      "Monday",
+                      "Tuesday",
+                      "Wednesday",
+                      "Thursday",
+                      "Friday",
+                      "Saturday",
+                      "Sunday",
+                    ],
+                }
+              - { label: "Time", name: "time", widget: "string" }
+              - {
+                  label: "Coach / Instructor",
+                  name: "coach",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "Description / Details",
+                  name: "description",
+                  widget: "string",
+                  required: false,
                 }
