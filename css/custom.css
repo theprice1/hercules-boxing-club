@@ -1,1 +1,11 @@
 # Only for styles Tailwind cant handle
+/* Prevent layout shifts from font loading */
+body {
+  font-family: "Inter", sans-serif;
+  font-display: swap;
+}
+
+.font-bebas {
+  font-family: "Bebas Neue", sans-serif;
+  font-display: swap;
+}

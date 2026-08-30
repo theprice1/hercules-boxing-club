@@ -48,8 +48,22 @@
     <link rel="dns-prefetch" href="https://elfsightcdn.com" />
 
     <!-- Compiled Production Tailwind CSS -->
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/custom.css" />
+    <link
+      rel="stylesheet"
+      href="css/style.css"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <link
+      rel="stylesheet"
+      href="css/custom.css"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="css/style.css" />
+      <link rel="stylesheet" href="css/custom.css" />
+    </noscript>
 
     <!-- Optimized Google Fonts -->
     <link
