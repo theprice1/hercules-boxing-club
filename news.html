@@ -14,9 +14,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://images.unsplash.com" />
-    <link rel="dns-prefetch" href="https://elfsightcdn.com" />
 
-    <!-- Standard synchronous CSS links to prevent layout shifts -->
+    <!-- Standard synchronous CSS links -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/custom.css" />
 
@@ -46,26 +45,26 @@
   </head>
 
   <body class="bg-transparent text-gray-900 flex flex-col min-h-screen">
-    <!-- Fixed background with explicit dimensions to prevent CLS -->
+    <!-- Fixed background with WebP compression for instantly fast LCP -->
     <div class="fixed inset-0 z-[-1]">
       <img
         srcset="
-          https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=800&q=80   800w,
-          https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=1920&q=80 1920w
+          https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=800&q=60&fm=webp   800w,
+          https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=1920&q=60&fm=webp 1920w
         "
         sizes="100vw"
-        src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=1920&q=80"
+        src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=800&q=60&fm=webp"
         alt="Amateur Boxing Gym"
         class="w-full h-full object-cover"
         width="1920"
         height="1080"
         fetchpriority="high"
         loading="eager"
+        decoding="async"
       />
       <div class="absolute inset-0 bg-white/40"></div>
     </div>
 
-    <!-- Corrected Navigation Bar -->
     <nav
       class="bg-black text-white p-4 sticky top-0 z-50 shadow-md border-b-2 border-purple-700"
     >
@@ -113,7 +112,6 @@
         <button
           type="button"
           aria-label="Open mobile menu"
-          title="Open mobile menu"
           class="md:hidden text-white focus:outline-none"
         >
           <span class="sr-only">Open mobile menu</span>
@@ -142,9 +140,8 @@
         >
           <span
             class="bg-purple-700 text-white px-4 py-1 text-sm font-bold uppercase rounded-full mb-3 inline-block tracking-wider"
+            >Gym Announcements</span
           >
-            Gym Announcements
-          </span>
           <h2
             class="text-4xl md:text-5xl font-extrabold uppercase tracking-tight text-black"
           >
@@ -152,11 +149,12 @@
           </h2>
         </div>
 
-        <!-- News Feed with Pre-Rendered Placeholder Cards to Lock Height and Prevent CLS -->
+        <!-- News Feed: Height locked and 3 placeholder cards added to match Desktop lg:grid-cols-3 layout -->
         <div
           id="news-feed"
-          class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12 min-h-[800px]"
+          class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12 min-h-[1200px] md:min-h-[800px]"
         >
+          <!-- Card 1 -->
           <article
             class="bg-white p-6 rounded-xl shadow-lg border-2 border-gray-100 flex flex-col h-full"
           >
@@ -176,6 +174,7 @@
               </p>
             </div>
           </article>
+          <!-- Card 2 -->
           <article
             class="bg-white p-6 rounded-xl shadow-lg border-2 border-gray-100 flex flex-col h-full"
           >
@@ -195,6 +194,23 @@
               </p>
             </div>
           </article>
+          <!-- Card 3 -->
+          <article
+            class="bg-white p-6 rounded-xl shadow-lg border-2 border-gray-100 flex flex-col h-full"
+          >
+            <span
+              class="inline-block bg-purple-100 text-purple-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider w-max mb-3"
+              >01 SEP 2026</span
+            >
+            <h3 class="font-extrabold text-black leading-tight text-xl mb-4">
+              Welcome to the New Season
+            </h3>
+            <div
+              class="text-sm text-gray-900 font-medium space-y-3 flex-grow leading-relaxed"
+            >
+              <p>Get ready for a massive year ahead at Hercules Boxing Club.</p>
+            </div>
+          </article>
         </div>
       </div>
 
@@ -208,8 +224,10 @@
 
             articles.forEach((article) => {
               const formattedBody = marked.parse(article.body);
+
+              // ADDED explicit width/height and loading="lazy" to eliminate internal card layout shifts
               const imageHTML = article.image
-                ? `<img src="${article.image}" alt="${article.title}" class="w-full h-48 object-cover rounded mb-4 shadow-sm">`
+                ? `<img src="${article.image}" alt="${article.title}" width="800" height="400" class="w-full h-48 object-cover rounded mb-4 shadow-sm" loading="lazy" decoding="async">`
                 : "";
 
               htmlContent += `
@@ -225,10 +243,9 @@
             });
             feed.innerHTML = htmlContent;
           })
-          .catch((error) => {
-            console.log("Using static news fallback");
-          });
+          .catch((error) => console.log("Using static news fallback"));
       </script>
+
       <section
         class="bg-black border-t-[6px] border-purple-700 text-center py-12 px-4 shadow-2xl relative z-10"
       >
@@ -248,7 +265,6 @@
       </section>
     </main>
 
-    <!-- Standard Footer -->
     <footer
       class="bg-gray-950 text-gray-400 py-12 border-t border-gray-900 mt-auto relative z-10"
     >
@@ -266,8 +282,6 @@
               href="https://www.instagram.com/herculesboxingclub/"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Instagram"
-              title="Follow us on Instagram"
               class="text-gray-400 hover:text-purple-500 transition-colors"
             >
               <span class="sr-only">Instagram</span>
@@ -288,8 +302,6 @@
               href="https://www.tiktok.com/@herculesboxingclub"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="TikTok"
-              title="Follow us on TikTok"
               class="text-gray-400 hover:text-purple-500 transition-colors"
             >
               <span class="sr-only">TikTok</span>
@@ -308,8 +320,6 @@
               href="https://www.facebook.com/people/Hercules-Boxing-Club/61593394803796/"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Facebook"
-              title="Like us on Facebook"
               class="text-gray-400 hover:text-purple-500 transition-colors"
             >
               <span class="sr-only">Facebook</span>
@@ -332,32 +342,43 @@
           <h4 class="text-white text-lg font-bold uppercase mb-4">Location</h4>
           <p>1a Hercules Street<br />Islington, London<br />N7 6AT</p>
         </div>
-        <div>
-          <h4 class="text-white text-lg font-bold uppercase mb-4">
-            Important Links
-          </h4>
-          <ul class="space-y-2">
-            <li>
-              <a
-                href="safeguarding.html"
-                class="hover:text-purple-500 transition"
-                >Safeguarding Policy</a
-              >
-            </li>
-            <li>
-              <a href="contact.html" class="hover:text-purple-500 transition"
-                >Contact Us</a
-              >
-            </li>
-            <li>
-              <a href="governance.html" class="hover:text-purple-500 transition"
-                >Governance & Policies</a
-              >
-            </li>
-          </ul>
-        </div>
       </div>
     </footer>
-    <script src="js/main.js"></script>
+
+    <!-- Scripts -->
+    <script src="js/main.js" defer></script>
+
+    <!-- Interaction-based Lazy Loading for Analytics -->
+    <script>
+      let scriptsLoaded = false;
+      function loadHeavyScripts() {
+        if (scriptsLoaded) return;
+        scriptsLoaded = true;
+
+        var gtagScript = document.createElement("script");
+        gtagScript.async = true;
+        gtagScript.src =
+          "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX";
+        document.body.appendChild(gtagScript);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+        gtag("config", "G-XXXXXXXXXX");
+      }
+
+      ["scroll", "mousemove", "touchstart", "keydown"].forEach(
+        function (event) {
+          window.addEventListener(event, loadHeavyScripts, {
+            once: true,
+            passive: true,
+          });
+        },
+      );
+
+      setTimeout(loadHeavyScripts, 3500);
+    </script>
   </body>
 </html>
