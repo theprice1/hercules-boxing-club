@@ -51,6 +51,7 @@
   </head>
 
   <body class="bg-transparent text-gray-900 flex flex-col min-h-screen">
+    <!-- Fixed background with explicit dimensions to prevent CLS -->
     <div class="fixed inset-0 z-[-1]">
       <img
         srcset="
@@ -61,10 +62,15 @@
         src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=1920&q=80"
         alt="Amateur Boxing Gym"
         class="w-full h-full object-cover"
+        width="1920"
+        height="1080"
+        fetchpriority="high"
+        loading="eager"
       />
       <div class="absolute inset-0 bg-white/40"></div>
     </div>
 
+    <!-- Navigation Bar -->
     <nav
       class="bg-black text-white p-4 sticky top-0 z-50 shadow-md border-b-2 border-purple-700"
     >
@@ -135,32 +141,33 @@
       </div>
     </nav>
 
+    <!-- Hero Section with baked-in initial text to prevent CLS text reflow -->
     <main class="flex-grow flex flex-col justify-center">
       <header
-        class="bg-gray-900/90 text-white py-24 text-center relative overflow-hidden shadow-lg border-b border-gray-800 min-h-[500px] flex flex-col justify-center"
+        class="bg-gray-900/90 text-white py-24 text-center relative overflow-hidden shadow-lg border-b border-gray-800"
       >
         <div class="container mx-auto px-4 relative z-10">
           <span
             id="hero-tag"
-            class="bg-purple-700 text-white px-4 py-1 text-sm font-bold uppercase rounded-full mb-6 inline-block tracking-wider shadow min-h-[28px] min-w-[120px]"
+            class="bg-purple-700 text-white px-4 py-1 text-sm font-bold uppercase rounded-full mb-6 inline-block tracking-wider shadow"
           >
-            Loading...
+            Awaiting England Boxing Affiliation
           </span>
           <h2
             id="hero-title"
-            class="text-5xl md:text-6xl font-extrabold mt-4 mb-6 uppercase tracking-tight min-h-[120px]"
+            class="text-5xl md:text-6xl font-extrabold mt-4 mb-6 uppercase tracking-tight"
           >
-            Loading...
+            Changing Lives<br />Through Sport
           </h2>
           <p
             id="hero-desc"
-            class="text-xl max-w-2xl mx-auto mb-10 text-gray-200 min-h-[56px]"
+            class="text-xl max-w-2xl mx-auto mb-10 text-gray-200"
           >
-            Loading...
+            A community-first, CIC-registered amateur boxing gym in Islington,
+            London. We build discipline, fitness, and champions in and out of
+            the ring.
           </p>
-          <div
-            class="flex flex-col sm:flex-row justify-center gap-4 min-h-[56px]"
-          >
+          <div class="flex flex-col sm:flex-row justify-center gap-4">
             <a
               href="timetable.html"
               class="bg-purple-700 text-white px-8 py-4 font-bold uppercase hover:bg-purple-600 transition rounded shadow-lg text-center"
@@ -175,6 +182,7 @@
         </div>
       </header>
 
+      <!-- Core Mission / CIC Section -->
       <section
         class="py-20 bg-white/70 backdrop-blur-md shadow-sm border-y border-white/50"
       >
@@ -182,20 +190,26 @@
           <div class="max-w-3xl mx-auto text-center mb-16">
             <h3
               id="mission-heading"
-              class="text-3xl font-extrabold uppercase mb-4 text-black min-h-[36px]"
+              class="text-3xl font-extrabold uppercase mb-4 text-black"
             >
-              Loading...
+              Our Community Mission
             </h3>
             <div class="w-24 h-1 bg-purple-700 mx-auto mb-6"></div>
             <div
               id="mission-body"
-              class="text-lg text-gray-900 leading-relaxed font-semibold min-h-[80px]"
+              class="text-lg text-gray-900 leading-relaxed font-semibold"
             >
-              <p>Loading...</p>
+              <p>
+                Hercules Boxing Club operates as a not-for-profit Community
+                Interest Company, making elite-level coaching accessible to
+                everyone in Islington.
+              </p>
             </div>
           </div>
 
+          <!-- 3 Pillars Grid -->
           <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <!-- Card 1 -->
             <div
               class="p-8 bg-white/80 backdrop-blur-lg rounded-lg border border-gray-200 shadow-md text-center transition hover:shadow-lg hover:-translate-y-1 duration-300 hover:border-purple-300"
             >
@@ -220,13 +234,15 @@
                 id="p1-title"
                 class="font-bold text-xl mb-3 uppercase text-black"
               >
-                Loading...
+                Competitive Pathway
               </h4>
               <p id="p1-desc" class="text-gray-800 text-sm font-medium">
-                Loading...
+                Preparing to step onto the national stage with structured
+                amateur bouts and elite sparring camps.
               </p>
             </div>
 
+            <!-- Card 2 -->
             <div
               class="p-8 bg-white/80 backdrop-blur-lg rounded-lg border border-gray-200 shadow-md text-center transition hover:shadow-lg hover:-translate-y-1 duration-300 hover:border-purple-300"
             >
@@ -251,13 +267,15 @@
                 id="p2-title"
                 class="font-bold text-xl mb-3 uppercase text-black"
               >
-                Loading...
+                Safe Environment
               </h4>
               <p id="p2-desc" class="text-gray-800 text-sm font-medium">
-                Loading...
+                Committed to excellence in welfare. We adhere strictly to
+                national safeguarding policies for youth and vulnerable adults.
               </p>
             </div>
 
+            <!-- Card 3 -->
             <div
               class="p-8 bg-white/80 backdrop-blur-lg rounded-lg border border-gray-200 shadow-md text-center transition hover:shadow-lg hover:-translate-y-1 duration-300 hover:border-purple-300"
             >
@@ -282,40 +300,36 @@
                 id="p3-title"
                 class="font-bold text-xl mb-3 uppercase text-black"
               >
-                Loading...
+                Youth Subsidies
               </h4>
               <p id="p3-desc" class="text-gray-800 text-sm font-medium">
-                Loading...
+                We ensure that cost is never a barrier. Our session fees are
+                heavily subsidized to support local Islington families.
               </p>
             </div>
           </div>
         </div>
       </section>
 
+      <!-- Optional dynamic sync script -->
       <script>
         fetch("data/home.json")
           .then((response) => response.json())
           .then((data) => {
-            if (data.affiliation_tag) {
+            if (data.affiliation_tag)
               document.getElementById("hero-tag").textContent =
                 data.affiliation_tag;
-            }
-            if (data.hero_title_1 && data.hero_title_2) {
+            if (data.hero_title_1 && data.hero_title_2)
               document.getElementById("hero-title").innerHTML =
                 `${data.hero_title_1}<br />${data.hero_title_2}`;
-            }
-            if (data.hero_desc) {
+            if (data.hero_desc)
               document.getElementById("hero-desc").textContent = data.hero_desc;
-            }
-            if (data.mission_heading) {
+            if (data.mission_heading)
               document.getElementById("mission-heading").textContent =
                 data.mission_heading;
-            }
-            if (data.mission_body) {
-              // Direct text assignment or basic rendering since marked is removed from index.html
+            if (data.mission_body)
               document.getElementById("mission-body").innerHTML =
                 `<p>${data.mission_body}</p>`;
-            }
             if (data.p1_title)
               document.getElementById("p1-title").textContent = data.p1_title;
             if (data.p1_desc)
@@ -329,11 +343,10 @@
             if (data.p3_desc)
               document.getElementById("p3-desc").textContent = data.p3_desc;
           })
-          .catch((error) => {
-            console.error("Error loading home data:", error);
-          });
+          .catch((error) => console.log("Using static fallback content"));
       </script>
 
+      <!-- Muhammad Ali Quote Section -->
       <section
         class="bg-black border-t-[6px] border-purple-700 text-center py-12 px-4 shadow-2xl relative z-10"
       >
@@ -353,6 +366,7 @@
       </section>
     </main>
 
+    <!-- Footer -->
     <footer
       class="bg-gray-950 text-gray-400 py-12 border-t border-gray-900 mt-auto relative z-10"
     >
