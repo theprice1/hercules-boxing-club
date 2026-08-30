@@ -30,9 +30,6 @@
       <link rel="stylesheet" href="css/custom.css" />
     </noscript>
 
-    <!-- Markdown Parser Library -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-
     <link
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;800&display=swap"
       rel="stylesheet"
@@ -44,9 +41,11 @@
     <style>
       body {
         font-family: "Inter", sans-serif;
+        font-display: swap;
       }
       .font-bebas {
         font-family: "Bebas Neue", sans-serif;
+        font-display: swap;
       }
     </style>
   </head>
@@ -62,12 +61,10 @@
         src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=1920&q=80"
         alt="Amateur Boxing Gym"
         class="w-full h-full object-cover"
-        fetchpriority="high"
       />
       <div class="absolute inset-0 bg-white/40"></div>
     </div>
 
-    <!-- Navigation Bar -->
     <nav
       class="bg-black text-white p-4 sticky top-0 z-50 shadow-md border-b-2 border-purple-700"
     >
@@ -138,46 +135,46 @@
       </div>
     </nav>
 
-    <main class="flex-grow">
-      <!-- Hero Section -->
+    <main class="flex-grow flex flex-col justify-center">
       <header
-        class="bg-gray-900/90 text-white py-24 text-center relative overflow-hidden shadow-lg border-b border-gray-800"
+        class="bg-gray-900/90 text-white py-24 text-center relative overflow-hidden shadow-lg border-b border-gray-800 min-h-[500px] flex flex-col justify-center"
       >
         <div class="container mx-auto px-4 relative z-10">
           <span
             id="hero-tag"
-            class="bg-purple-700 text-white px-4 py-1 text-sm font-bold uppercase rounded-full mb-6 inline-block tracking-wider shadow"
+            class="bg-purple-700 text-white px-4 py-1 text-sm font-bold uppercase rounded-full mb-6 inline-block tracking-wider shadow min-h-[28px] min-w-[120px]"
           >
             Loading...
           </span>
           <h2
             id="hero-title"
-            class="text-5xl md:text-6xl font-extrabold mt-4 mb-6 uppercase tracking-tight"
+            class="text-5xl md:text-6xl font-extrabold mt-4 mb-6 uppercase tracking-tight min-h-[120px]"
           >
             Loading...
           </h2>
           <p
             id="hero-desc"
-            class="text-xl max-w-2xl mx-auto mb-10 text-gray-200"
+            class="text-xl max-w-2xl mx-auto mb-10 text-gray-200 min-h-[56px]"
           >
             Loading...
           </p>
-          <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <div
+            class="flex flex-col sm:flex-row justify-center gap-4 min-h-[56px]"
+          >
             <a
               href="timetable.html"
-              class="bg-purple-700 text-white px-8 py-4 font-bold uppercase hover:bg-purple-600 transition rounded shadow-lg"
+              class="bg-purple-700 text-white px-8 py-4 font-bold uppercase hover:bg-purple-600 transition rounded shadow-lg text-center"
               >View Timetable</a
             >
             <a
               href="contact.html"
-              class="bg-transparent border-2 border-white text-white px-8 py-4 font-bold uppercase hover:bg-white hover:text-black transition rounded backdrop-blur-sm"
+              class="bg-transparent border-2 border-white text-white px-8 py-4 font-bold uppercase hover:bg-white hover:text-black transition rounded backdrop-blur-sm text-center"
               >Book a Trial</a
             >
           </div>
         </div>
       </header>
 
-      <!-- Core Mission / CIC Section -->
       <section
         class="py-20 bg-white/70 backdrop-blur-md shadow-sm border-y border-white/50"
       >
@@ -185,22 +182,20 @@
           <div class="max-w-3xl mx-auto text-center mb-16">
             <h3
               id="mission-heading"
-              class="text-3xl font-extrabold uppercase mb-4 text-black"
+              class="text-3xl font-extrabold uppercase mb-4 text-black min-h-[36px]"
             >
               Loading...
             </h3>
             <div class="w-24 h-1 bg-purple-700 mx-auto mb-6"></div>
             <div
               id="mission-body"
-              class="text-lg text-gray-900 leading-relaxed font-semibold"
+              class="text-lg text-gray-900 leading-relaxed font-semibold min-h-[80px]"
             >
               <p>Loading...</p>
             </div>
           </div>
 
-          <!-- 3 Pillars Grid -->
           <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <!-- Card 1 -->
             <div
               class="p-8 bg-white/80 backdrop-blur-lg rounded-lg border border-gray-200 shadow-md text-center transition hover:shadow-lg hover:-translate-y-1 duration-300 hover:border-purple-300"
             >
@@ -232,7 +227,6 @@
               </p>
             </div>
 
-            <!-- Card 2 -->
             <div
               class="p-8 bg-white/80 backdrop-blur-lg rounded-lg border border-gray-200 shadow-md text-center transition hover:shadow-lg hover:-translate-y-1 duration-300 hover:border-purple-300"
             >
@@ -264,7 +258,6 @@
               </p>
             </div>
 
-            <!-- Card 3 -->
             <div
               class="p-8 bg-white/80 backdrop-blur-lg rounded-lg border border-gray-200 shadow-md text-center transition hover:shadow-lg hover:-translate-y-1 duration-300 hover:border-purple-300"
             >
@@ -299,7 +292,6 @@
         </div>
       </section>
 
-      <!-- Script to fetch and render home JSON -->
       <script>
         fetch("data/home.json")
           .then((response) => response.json())
@@ -342,7 +334,6 @@
           });
       </script>
 
-      <!-- Muhammad Ali Quote Section -->
       <section
         class="bg-black border-t-[6px] border-purple-700 text-center py-12 px-4 shadow-2xl relative z-10"
       >
@@ -362,7 +353,6 @@
       </section>
     </main>
 
-    <!-- Footer -->
     <footer
       class="bg-gray-950 text-gray-400 py-12 border-t border-gray-900 mt-auto relative z-10"
     >
