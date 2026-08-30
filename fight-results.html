@@ -9,10 +9,6 @@
       name="description"
       content="Hercules Boxing Club is a community-first, CIC-registered amateur boxing gym in Islington, London. We build discipline, fitness, and champions in and out of the ring."
     />
-    <meta
-      name="keywords"
-      content="boxing gym Islington, amateur boxing London, Hercules Boxing Club, youth boxing, CIC boxing, fitness London"
-    />
     <meta name="author" content="Hercules Boxing Club" />
 
     <meta property="og:title" content="Hercules Boxing Club | Islington" />
@@ -26,17 +22,6 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_GB" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Hercules Boxing Club | Islington" />
-    <meta
-      name="twitter:description"
-      content="Changing lives through sport. Join our community-first boxing gym in the heart of Islington."
-    />
-    <meta
-      name="twitter:image"
-      content="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=1200&q=80"
-    />
 
     <!-- High-Speed DNS Preconnects -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -74,7 +59,7 @@
     </style>
   </head>
   <body class="bg-transparent text-gray-900 flex flex-col min-h-screen">
-    <!-- Fixed background with explicit dimensions and WebP compression -->
+    <!-- Fixed background with explicit dimensions and WebP Compression -->
     <div class="fixed inset-0 z-[-1]">
       <img
         srcset="
@@ -89,6 +74,7 @@
         height="1080"
         fetchpriority="high"
         loading="eager"
+        decoding="async"
       />
       <div class="absolute inset-0 bg-white/40"></div>
     </div>
@@ -181,8 +167,12 @@
           </p>
         </div>
 
-        <!-- Results Feed with Pre-Rendered Placeholder Cards -->
-        <div id="results-feed" class="space-y-6 min-h-[600px]">
+        <!-- Height increased to min-h-[1200px] on mobile, [800px] on desktop with 3 placeholder cards to eliminate CLS -->
+        <div
+          id="results-feed"
+          class="space-y-6 min-h-[1200px] md:min-h-[800px]"
+        >
+          <!-- Card 1 -->
           <div
             class="bg-white/80 backdrop-blur-md rounded-lg shadow-md border border-gray-200 overflow-hidden flex flex-col md:flex-row"
           >
@@ -205,6 +195,60 @@
                   Tactical masterclass dealing with a tricky southpaw stance.
                   Harper adjusted his distance brilliantly in the middle rounds
                   to secure a unanimous points victory.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="bg-white/80 backdrop-blur-md rounded-lg shadow-md border border-gray-200 overflow-hidden flex flex-col md:flex-row"
+          >
+            <div
+              class="bg-blue-700 text-white md:w-48 p-6 flex flex-col justify-center items-center text-center"
+            >
+              <span class="text-sm font-bold tracking-widest uppercase mb-1"
+                >05 SEP 2026</span
+              >
+              <span class="text-3xl font-bebas tracking-wider uppercase"
+                >EXHIBITION</span
+              >
+            </div>
+            <div class="p-6 flex-grow flex flex-col justify-center">
+              <h3 class="text-xl font-bold text-black uppercase mb-3">
+                London Charity Open: M. Davies vs T. Wright
+              </h3>
+              <div class="text-sm text-gray-800 leading-relaxed space-y-2">
+                <p>
+                  A fantastic display of skill and sportsmanship from both
+                  fighters raising funds for local youth programs.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="bg-white/80 backdrop-blur-md rounded-lg shadow-md border border-gray-200 overflow-hidden flex flex-col md:flex-row"
+          >
+            <div
+              class="bg-purple-700 text-white md:w-48 p-6 flex flex-col justify-center items-center text-center"
+            >
+              <span class="text-sm font-bold tracking-widest uppercase mb-1"
+                >28 AUG 2026</span
+              >
+              <span class="text-3xl font-bebas tracking-wider uppercase"
+                >WIN (TKO)</span
+              >
+            </div>
+            <div class="p-6 flex-grow flex flex-col justify-center">
+              <h3 class="text-xl font-bold text-black uppercase mb-3">
+                Regional Qualifiers: S. Patel vs D. Smith
+              </h3>
+              <div class="text-sm text-gray-800 leading-relaxed space-y-2">
+                <p>
+                  Relentless body work forced a standing count in the second
+                  round, leading to an early stoppage victory.
                 </p>
               </div>
             </div>
@@ -389,24 +433,37 @@
     <!-- Scripts -->
     <script src="js/main.js" defer></script>
 
-    <!-- Delayed Google Analytics to prevent main-thread blocking during load -->
+    <!-- Interaction-based Lazy Loading for Analytics -->
     <script>
-      window.addEventListener("load", function () {
-        setTimeout(function () {
-          var gtagScript = document.createElement("script");
-          gtagScript.async = true;
-          gtagScript.src =
-            "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX";
-          document.body.appendChild(gtagScript);
+      let scriptsLoaded = false;
+      function loadHeavyScripts() {
+        if (scriptsLoaded) return;
+        scriptsLoaded = true;
 
-          window.dataLayer = window.dataLayer || [];
-          function gtag() {
-            dataLayer.push(arguments);
-          }
-          gtag("js", new Date());
-          gtag("config", "G-XXXXXXXXXX");
-        }, 2500); // 2.5 second delay after load
-      });
+        var gtagScript = document.createElement("script");
+        gtagScript.async = true;
+        gtagScript.src =
+          "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX";
+        document.body.appendChild(gtagScript);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+        gtag("config", "G-XXXXXXXXXX");
+      }
+
+      ["scroll", "mousemove", "touchstart", "keydown"].forEach(
+        function (event) {
+          window.addEventListener(event, loadHeavyScripts, {
+            once: true,
+            passive: true,
+          });
+        },
+      );
+
+      setTimeout(loadHeavyScripts, 3500);
     </script>
   </body>
 </html>
