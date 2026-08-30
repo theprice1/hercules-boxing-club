@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage (Highest Priority) -->
+  <url>
+    <loc>https://theprice1.github.io/hercules-boxing-club/index.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Core Info Pages -->
+  <url>
+    <loc>https://theprice1.github.io/hercules-boxing-club/timetable.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://theprice1.github.io/hercules-boxing-club/about.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://theprice1.github.io/hercules-boxing-club/contact.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Dynamic/Feed Pages -->
+  <url>
+    <loc>https://theprice1.github.io/hercules-boxing-club/news.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://theprice1.github.io/hercules-boxing-club/fight-results.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://theprice1.github.io/hercules-boxing-club/social.html</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Legal & Governance Pages (Lower Priority, but vital for CIC trust) -->
+  <url>
+    <loc>https://theprice1.github.io/hercules-boxing-club/safeguarding.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://theprice1.github.io/hercules-boxing-club/governance.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+</urlset>

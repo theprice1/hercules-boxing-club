@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://theprice1.github.io/hercules-boxing-club/sitemap.xml
