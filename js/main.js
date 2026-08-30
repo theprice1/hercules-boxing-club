@@ -1,14 +1,26 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const menuButton = document.querySelector(
-    'button[aria-label="Open mobile menu"]',
-  );
+  console.log("Hercules Nav Script Loaded");
 
-  // Create a mobile menu drawer dynamically if it doesn't exist
+  const menuButton =
+    document.querySelector('button[aria-label="Open mobile menu"]') ||
+    document.querySelector(".md\\:hidden");
   const navContainer = document.querySelector("nav .container");
 
-  if (navContainer && menuButton) {
-    // Create mobile dropdown div
-    const mobileMenu = document.createElement("div");
+  if (!navContainer) {
+    console.warn("Nav container not found");
+    return;
+  }
+
+  if (!menuButton) {
+    console.warn("Mobile menu button not found");
+    return;
+  }
+
+  // Create mobile dropdown div if it doesn't exist
+  let mobileMenu = document.getElementById("mobile-menu-drawer");
+  if (!mobileMenu) {
+    mobileMenu = document.createElement("div");
+    mobileMenu.id = "mobile-menu-drawer";
     mobileMenu.className =
       "hidden md:hidden absolute top-full left-0 w-full bg-black/95 text-white p-6 flex flex-col space-y-4 border-t-2 border-purple-700 shadow-xl z-50 backdrop-blur-md";
     mobileMenu.innerHTML = `
@@ -22,21 +34,22 @@ document.addEventListener("DOMContentLoaded", () => {
         <a href="contact.html" class="hover:text-purple-400 transition py-2">Contact</a>
     `;
 
-    // Ensure nav is relative so absolute positioning works smoothly on mobile
     navContainer.parentElement.style.position = "relative";
     navContainer.parentElement.appendChild(mobileMenu);
-
-    // Toggle visibility on click
-    menuButton.addEventListener("click", (e) => {
-      e.stopPropagation();
-      mobileMenu.classList.toggle("hidden");
-    });
-
-    // Close menu when clicking anywhere outside of it
-    document.addEventListener("click", (e) => {
-      if (!mobileMenu.contains(e.target) && !menuButton.contains(e.target)) {
-        mobileMenu.classList.add("hidden");
-      }
-    });
+    console.log("Mobile menu drawer created and injected");
   }
+
+  // Toggle visibility on click
+  menuButton.addEventListener("click", (e) => {
+    e.stopPropagation();
+    mobileMenu.classList.toggle("hidden");
+    console.log("Mobile menu toggled");
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!mobileMenu.contains(e.target) && !menuButton.contains(e.target)) {
+      mobileMenu.classList.add("hidden");
+    }
+  });
 });
