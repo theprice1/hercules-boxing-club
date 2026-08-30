@@ -8,7 +8,8 @@
       {
         "ignore": [
           "meta[name=theme-color]",
-          "img[fetchpriority]"
+          "img[fetchpriority]",
+          "link[fetchpriority]"
         ]
       }
     ]

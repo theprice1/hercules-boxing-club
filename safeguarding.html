@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Safeguarding Policy | Hercules Boxing Club | Islington</title>
 
-    <!-- Search Engine Optimization (SEO) -->
     <meta
       name="description"
       content="Read the comprehensive safeguarding policies, child protection procedures, and Welfare Officer contact details for Hercules Boxing Club in Islington, London."
@@ -16,7 +15,6 @@
     />
     <meta name="author" content="Hercules Boxing Club" />
 
-    <!-- Social Media Sharing -->
     <meta
       property="og:title"
       content="Safeguarding Policy | Hercules Boxing Club"
@@ -36,9 +34,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://images.unsplash.com" />
-    <link rel="dns-prefetch" href="https://elfsightcdn.com" />
 
-    <!-- Standard synchronous CSS links to prevent layout shifts -->
+    <!-- PRELOAD LCP Image -->
+    <link
+      rel="preload"
+      as="image"
+      href="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=1920&q=80"
+      fetchpriority="high"
+    />
+
+    <!-- Standard synchronous CSS links -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/custom.css" />
 
@@ -54,7 +59,6 @@
       rel="stylesheet"
     />
 
-    <!-- Favicon & Mobile Theme -->
     <link rel="icon" type="image/webp" href="logo.webp" />
     <meta name="theme-color" content="#000000" />
 
@@ -68,24 +72,10 @@
         font-display: swap;
       }
     </style>
-
-    <!-- Google Analytics (GA4) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-XXXXXXXXXX");
-    </script>
   </head>
 
   <body class="bg-transparent text-gray-900 flex flex-col min-h-screen">
-    <!-- Fixed background with explicit dimensions to prevent CLS -->
+    <!-- Fixed background with explicit dimensions -->
     <div class="fixed inset-0 z-[-1]">
       <img
         srcset="
@@ -100,11 +90,11 @@
         height="1080"
         fetchpriority="high"
         loading="eager"
+        decoding="async"
       />
       <div class="absolute inset-0 bg-white/40"></div>
     </div>
 
-    <!-- Navigation Bar -->
     <nav
       class="bg-black text-white p-4 sticky top-0 z-50 shadow-md border-b-2 border-purple-700"
     >
@@ -196,7 +186,6 @@
           </p>
         </div>
 
-        <!-- Welfare Officer Highlight Box -->
         <div
           class="bg-black text-white p-8 rounded-xl shadow-xl border-l-[6px] border-purple-700 mb-8"
         >
@@ -218,16 +207,14 @@
             </div>
             <div
               id="welfare-contact-box"
-              class="bg-gray-900 p-5 rounded-lg border border-gray-800 w-full md:w-auto text-sm space-y-2"
+              class="bg-gray-900 p-5 rounded-lg border border-gray-800 w-full md:w-auto text-sm space-y-2 min-h-[100px]"
             >
               <p class="text-gray-400">Loading contact details...</p>
             </div>
           </div>
         </div>
 
-        <!-- Comprehensive Policy Sections -->
         <div class="space-y-8">
-          <!-- Section 1 -->
           <div
             class="bg-white/80 backdrop-blur-md p-8 rounded-lg shadow-md border border-gray-200"
           >
@@ -238,13 +225,12 @@
             </h3>
             <div
               id="commitment-content"
-              class="text-gray-800 leading-relaxed font-medium space-y-4"
+              class="text-gray-800 leading-relaxed font-medium space-y-4 min-h-[50px]"
             >
               <p>Loading policy commitment...</p>
             </div>
           </div>
 
-          <!-- Section 2 -->
           <div
             class="bg-white/80 backdrop-blur-md p-8 rounded-lg shadow-md border border-gray-200"
           >
@@ -255,13 +241,12 @@
             </h3>
             <div
               id="recruitment-content"
-              class="text-gray-800 leading-relaxed font-medium space-y-4"
+              class="text-gray-800 leading-relaxed font-medium space-y-4 min-h-[50px]"
             >
               <p>Loading recruitment standards...</p>
             </div>
           </div>
 
-          <!-- Section 3 -->
           <div
             class="bg-white/80 backdrop-blur-md p-8 rounded-lg shadow-md border border-gray-200"
           >
@@ -272,13 +257,12 @@
             </h3>
             <div
               id="codes-content"
-              class="text-gray-800 leading-relaxed font-medium space-y-4"
+              class="text-gray-800 leading-relaxed font-medium space-y-4 min-h-[50px]"
             >
               <p>Loading codes of conduct...</p>
             </div>
           </div>
 
-          <!-- Section 4 -->
           <div
             class="bg-white/80 backdrop-blur-md p-8 rounded-lg shadow-md border border-gray-200"
           >
@@ -289,13 +273,12 @@
             </h3>
             <div
               id="reporting-content"
-              class="text-gray-800 leading-relaxed font-medium space-y-4"
+              class="text-gray-800 leading-relaxed font-medium space-y-4 min-h-[50px]"
             >
               <p>Loading reporting procedures...</p>
             </div>
           </div>
 
-          <!-- Section 5 -->
           <div
             class="bg-white/80 backdrop-blur-md p-8 rounded-lg shadow-md border border-gray-200"
           >
@@ -306,13 +289,12 @@
             </h3>
             <div
               id="digital-content"
-              class="text-gray-800 leading-relaxed font-medium space-y-4"
+              class="text-gray-800 leading-relaxed font-medium space-y-4 min-h-[50px]"
             >
               <p>Loading digital safety rules...</p>
             </div>
           </div>
 
-          <!-- External Agencies / Emergency Box -->
           <div
             class="bg-white/80 backdrop-blur-md p-8 rounded-lg shadow-md border border-gray-200 border-l-4 border-l-black"
           >
@@ -347,7 +329,6 @@
             </div>
           </div>
 
-          <!-- Governance Hub Link -->
           <div
             class="text-center bg-purple-900/10 border border-purple-700/30 p-6 rounded-lg"
           >
@@ -368,7 +349,6 @@
         </div>
       </div>
 
-      <!-- Script to load full safeguarding JSON -->
       <script>
         fetch("data/safeguarding.json")
           .then((response) => response.json())
@@ -392,12 +372,7 @@
               data.digital_body || "",
             );
           })
-          .catch((error) => {
-            console.error(
-              "Error loading comprehensive safeguarding data:",
-              error,
-            );
-          });
+          .catch((error) => console.log("Using static safeguarding fallback"));
       </script>
 
       <section
@@ -419,7 +394,6 @@
       </section>
     </main>
 
-    <!-- FOOTER WITH SOCIAL MEDIA LINKS RESTORED -->
     <footer
       class="bg-gray-950 text-gray-400 py-12 border-t border-gray-900 mt-auto relative z-10"
     >
@@ -433,7 +407,6 @@
             and out of the ring.
           </p>
           <div class="flex space-x-6 text-white mt-4">
-            <!-- Instagram -->
             <a
               href="https://www.instagram.com/herculesboxingclub/"
               target="_blank"
@@ -456,7 +429,6 @@
                 />
               </svg>
             </a>
-            <!-- TikTok -->
             <a
               href="https://www.tiktok.com/@herculesboxingclub"
               target="_blank"
@@ -477,7 +449,6 @@
                 />
               </svg>
             </a>
-            <!-- Facebook -->
             <a
               href="https://www.facebook.com/people/Hercules-Boxing-Club/61593394803796/"
               target="_blank"
@@ -533,6 +504,27 @@
       </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <!-- Scripts -->
+    <script src="js/main.js" defer></script>
+
+    <!-- Delayed Google Analytics -->
+    <script>
+      window.addEventListener("load", function () {
+        setTimeout(function () {
+          var gtagScript = document.createElement("script");
+          gtagScript.async = true;
+          gtagScript.src =
+            "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX";
+          document.body.appendChild(gtagScript);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+          gtag("config", "G-XXXXXXXXXX");
+        }, 2500);
+      });
+    </script>
   </body>
 </html>

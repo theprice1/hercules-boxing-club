@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us | Hercules Boxing Club | Islington</title>
 
-    <!-- Search Engine Optimization (SEO) -->
     <meta
       name="description"
       content="Hercules Boxing Club is a community-first, CIC-registered amateur boxing gym in Islington, London. We build discipline, fitness, and champions in and out of the ring."
@@ -16,7 +15,6 @@
     />
     <meta name="author" content="Hercules Boxing Club" />
 
-    <!-- Social Media Sharing (Open Graph & WhatsApp/Facebook Previews) -->
     <meta property="og:title" content="Hercules Boxing Club | Islington" />
     <meta
       property="og:description"
@@ -29,7 +27,6 @@
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_GB" />
 
-    <!-- Twitter / X Preview Cards -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Hercules Boxing Club | Islington" />
     <meta
@@ -47,7 +44,15 @@
     <link rel="preconnect" href="https://images.unsplash.com" />
     <link rel="dns-prefetch" href="https://elfsightcdn.com" />
 
-    <!-- Standard synchronous CSS links to prevent layout shifts -->
+    <!-- PRELOAD LCP Image -->
+    <link
+      rel="preload"
+      as="image"
+      href="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=1920&q=80"
+      fetchpriority="high"
+    />
+
+    <!-- Standard synchronous CSS links -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/custom.css" />
 
@@ -63,7 +68,6 @@
       rel="stylesheet"
     />
 
-    <!-- Favicon & Mobile Theme -->
     <link rel="icon" type="image/webp" href="logo.webp" />
     <meta name="theme-color" content="#000000" />
 
@@ -77,24 +81,10 @@
         font-display: swap;
       }
     </style>
-
-    <!-- Google Analytics (GA4) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-XXXXXXXXXX");
-    </script>
   </head>
 
   <body class="bg-transparent text-gray-900 flex flex-col min-h-screen">
-    <!-- Fixed background with explicit dimensions to prevent CLS -->
+    <!-- Fixed background with explicit dimensions -->
     <div class="fixed inset-0 z-[-1]">
       <img
         srcset="
@@ -109,6 +99,7 @@
         height="1080"
         fetchpriority="high"
         loading="eager"
+        decoding="async"
       />
       <div class="absolute inset-0 bg-white/40"></div>
     </div>
@@ -350,7 +341,7 @@
               </h3>
               <div
                 id="visiting-info-content"
-                class="space-y-3 text-sm text-gray-800 font-medium"
+                class="space-y-3 text-sm text-gray-800 font-medium min-h-[60px]"
               >
                 <p>Loading visiting instructions...</p>
               </div>
@@ -359,7 +350,6 @@
         </div>
       </div>
 
-      <!-- Script to fetch and populate contact JSON -->
       <script>
         fetch("data/contact.json")
           .then((response) => response.json())
@@ -395,9 +385,9 @@
                 marked.parse(data.visiting_info);
             }
           })
-          .catch((error) => {
-            console.error("Error loading contact data:", error);
-          });
+          .catch((error) =>
+            console.error("Error loading contact data:", error),
+          );
       </script>
 
       <section
@@ -529,6 +519,27 @@
       </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <!-- Scripts -->
+    <script src="js/main.js" defer></script>
+
+    <!-- Delayed Google Analytics -->
+    <script>
+      window.addEventListener("load", function () {
+        setTimeout(function () {
+          var gtagScript = document.createElement("script");
+          gtagScript.async = true;
+          gtagScript.src =
+            "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX";
+          document.body.appendChild(gtagScript);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+          gtag("config", "G-XXXXXXXXXX");
+        }, 2500);
+      });
+    </script>
   </body>
 </html>
