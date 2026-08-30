@@ -203,18 +203,16 @@
           .then((response) => response.json())
           .then((data) => {
             const feed = document.getElementById("news-feed");
-            feed.innerHTML = "";
-
             const articles = data.items.reverse();
+            let htmlContent = "";
 
             articles.forEach((article) => {
               const formattedBody = marked.parse(article.body);
-
               const imageHTML = article.image
                 ? `<img src="${article.image}" alt="${article.title}" class="w-full h-48 object-cover rounded mb-4 shadow-sm">`
                 : "";
 
-              const card = `
+              htmlContent += `
                 <article class="bg-white p-6 rounded-xl shadow-lg border-2 border-gray-100 flex flex-col h-full hover:shadow-2xl hover:-translate-y-1 transition duration-300">
                   <span class="inline-block bg-purple-100 text-purple-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider w-max mb-3">${article.date}</span>
                   <h3 class="font-extrabold text-black leading-tight text-xl mb-4">${article.title}</h3>
@@ -224,15 +222,13 @@
                   </div>
                 </article>
               `;
-
-              feed.innerHTML += card;
             });
+            feed.innerHTML = htmlContent;
           })
           .catch((error) => {
             console.log("Using static news fallback");
           });
       </script>
-
       <section
         class="bg-black border-t-[6px] border-purple-700 text-center py-12 px-4 shadow-2xl relative z-10"
       >

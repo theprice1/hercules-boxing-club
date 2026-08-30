@@ -227,7 +227,6 @@
           .then((response) => response.json())
           .then((data) => {
             const feed = document.getElementById("timetable-feed");
-            feed.innerHTML = "";
 
             if (!data.items || data.items.length === 0) {
               feed.innerHTML =
@@ -235,6 +234,7 @@
               return;
             }
 
+            let htmlContent = "";
             data.items.forEach((item) => {
               const coachHTML = item.coach
                 ? `<span class="text-xs bg-purple-100 text-purple-800 font-bold px-2.5 py-1 rounded">Coach: ${item.coach}</span>`
@@ -243,7 +243,7 @@
                 ? `<p class="text-gray-700 font-medium text-sm mt-3 leading-relaxed">${item.description}</p>`
                 : "";
 
-              const card = `
+              htmlContent += `
                 <div class="bg-white/80 backdrop-blur-md p-6 rounded-lg shadow-md border border-gray-200 flex flex-col justify-between transition hover:shadow-lg">
                   <div>
                     <div class="flex justify-between items-start mb-3">
@@ -256,12 +256,11 @@
                   </div>
                 </div>
               `;
-              feed.innerHTML += card;
             });
+            feed.innerHTML = htmlContent;
           })
           .catch((error) => {
-            document.getElementById("timetable-feed").innerHTML =
-              '<p class="text-red-600 font-semibold text-center py-8 col-span-2">Error loading schedule. Please try again later.</p>';
+            console.log("Using static timetable fallback");
           });
       </script>
 
