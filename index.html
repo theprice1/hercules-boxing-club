@@ -13,22 +13,10 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="css/style.css"
-      media="print"
-      onload="this.media = 'all'"
-    />
-    <link
-      rel="stylesheet"
-      href="css/custom.css"
-      media="print"
-      onload="this.media = 'all'"
-    />
-    <noscript>
-      <link rel="stylesheet" href="css/style.css" />
-      <link rel="stylesheet" href="css/custom.css" />
-    </noscript>
+
+    <!-- Standard synchronous CSS links to prevent unstyled flash and CLS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/custom.css" />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;800&display=swap"
@@ -141,7 +129,7 @@
       </div>
     </nav>
 
-    <!-- Hero Section with baked-in initial text to prevent CLS text reflow -->
+    <!-- Hero Section -->
     <main class="flex-grow flex flex-col justify-center">
       <header
         class="bg-gray-900/90 text-white py-24 text-center relative overflow-hidden shadow-lg border-b border-gray-800"
