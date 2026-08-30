@@ -9,10 +9,6 @@
       name="description"
       content="View the weekly training schedule at Hercules Boxing Club. Classes for juniors, seniors, competitive squads, and fitness members in Islington, London."
     />
-    <meta
-      name="keywords"
-      content="boxing gym Islington, amateur boxing London, Hercules Boxing Club, youth boxing, CIC boxing, fitness London"
-    />
     <meta name="author" content="Hercules Boxing Club" />
 
     <!-- Open Graph & Twitter -->
@@ -27,16 +23,6 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_GB" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Hercules Boxing Club | Islington" />
-    <meta
-      name="twitter:description"
-      content="Changing lives through sport. Join our community-first boxing gym in the heart of Islington."
-    />
-    <meta
-      name="twitter:image"
-      content="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=1200&q=80"
-    />
 
     <!-- High-Speed DNS Preconnects -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -69,7 +55,7 @@
   </head>
 
   <body class="bg-transparent text-gray-900 flex flex-col min-h-screen">
-    <!-- Fixed background with explicit dimensions and WebP compression -->
+    <!-- Fixed background with WebP compression -->
     <div class="fixed inset-0 z-[-1]">
       <img
         srcset="
@@ -179,10 +165,12 @@
           </p>
         </div>
 
+        <!-- Height increased to min-h-[1000px] on mobile and min-h-[600px] on desktop to completely prevent CLS -->
         <div
           id="timetable-feed"
-          class="grid md:grid-cols-2 gap-6 min-h-[500px]"
+          class="grid md:grid-cols-2 gap-6 min-h-[1000px] md:min-h-[600px]"
         >
+          <!-- Card 1 -->
           <div
             class="bg-white/80 backdrop-blur-md p-6 rounded-lg shadow-md border border-gray-200 flex flex-col justify-between"
           >
@@ -205,6 +193,7 @@
               </p>
             </div>
           </div>
+          <!-- Card 2 -->
           <div
             class="bg-white/80 backdrop-blur-md p-6 rounded-lg shadow-md border border-gray-200 flex flex-col justify-between"
           >
@@ -224,6 +213,52 @@
               <p class="text-gray-700 font-medium text-sm mt-3 leading-relaxed">
                 Advanced technical sparring sessions, stamina conditioning, and
                 competitive bout preparation.
+              </p>
+            </div>
+          </div>
+          <!-- Card 3 (Extra placeholder to reserve vertical space) -->
+          <div
+            class="bg-white/80 backdrop-blur-md p-6 rounded-lg shadow-md border border-gray-200 flex flex-col justify-between"
+          >
+            <div>
+              <div class="flex justify-between items-start mb-3">
+                <span
+                  class="bg-black text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded"
+                  >Friday</span
+                >
+              </div>
+              <h3 class="text-2xl font-bold text-black uppercase mb-1">
+                Open Sparring
+              </h3>
+              <p class="text-purple-700 font-bold text-base mb-2">
+                6:00 PM - 8:00 PM
+              </p>
+              <p class="text-gray-700 font-medium text-sm mt-3 leading-relaxed">
+                Supervised open sparring for registered members and affiliated
+                club visitors.
+              </p>
+            </div>
+          </div>
+          <!-- Card 4 (Extra placeholder to reserve vertical space) -->
+          <div
+            class="bg-white/80 backdrop-blur-md p-6 rounded-lg shadow-md border border-gray-200 flex flex-col justify-between"
+          >
+            <div>
+              <div class="flex justify-between items-start mb-3">
+                <span
+                  class="bg-black text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded"
+                  >Saturday</span
+                >
+              </div>
+              <h3 class="text-2xl font-bold text-black uppercase mb-1">
+                Weekend Warriors
+              </h3>
+              <p class="text-purple-700 font-bold text-base mb-2">
+                10:00 AM - 11:30 AM
+              </p>
+              <p class="text-gray-700 font-medium text-sm mt-3 leading-relaxed">
+                High-intensity pad work, heavy bag drills, and circuit
+                conditioning for all fitness levels.
               </p>
             </div>
           </div>
