@@ -312,9 +312,9 @@
                 data.mission_heading;
             }
             if (data.mission_body) {
-              document.getElementById("mission-body").innerHTML = marked.parse(
-                data.mission_body,
-              );
+              // Direct text assignment or basic rendering since marked is removed from index.html
+              document.getElementById("mission-body").innerHTML =
+                `<p>${data.mission_body}</p>`;
             }
             if (data.p1_title)
               document.getElementById("p1-title").textContent = data.p1_title;
