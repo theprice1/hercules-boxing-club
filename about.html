@@ -39,9 +39,15 @@
   <body class="bg-transparent text-gray-900 flex flex-col min-h-screen">
     <div class="fixed inset-0 z-[-1]">
       <img
+        srcset="
+          https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=800&q=80   800w,
+          https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=1920&q=80 1920w
+        "
+        sizes="100vw"
         src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=1920&q=80"
         alt="Amateur Boxing Gym"
         class="w-full h-full object-cover"
+        fetchpriority="high"
       />
       <div class="absolute inset-0 bg-white/40"></div>
     </div>
