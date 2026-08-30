@@ -199,8 +199,11 @@
           </p>
         </div>
 
-        <!-- Dynamic Timetable Feed -->
-        <div id="timetable-feed" class="grid md:grid-cols-2 gap-6">
+        <!-- Dynamic Timetable Feed with explicit min-height to prevent CLS -->
+        <div
+          id="timetable-feed"
+          class="grid md:grid-cols-2 gap-6 min-h-[500px]"
+        >
           <p class="text-gray-800 font-semibold text-center py-8 col-span-2">
             Loading training schedule...
           </p>
