@@ -1,15 +1,124 @@
 {
   "items": [
     {
-      "title": "Welcome to the New Hercules Boxing Club Website",
-      "date": "2026-08-29",
-      "image": "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=800&q=80",
-      "body": "We are thrilled to launch our new digital home. Keep an eye on this page for weekend fight results, community announcements, and funding updates."
+      "title": "Happy New Year from Hercules BC",
+      "date": "05 Jan 2026",
+      "image": "",
+      "body": "Welcome to a massive year for the club. 2026 is going to be the year we secure our official England Boxing affiliation and take our squads to the next level. Let's get to work!"
     },
     {
-      "title": "Big Weekend Sparring Session Confirmed",
-      "date": "29 Aug 2026",
-      "body": "All senior squad members are down for heavy rounds this Saturday at 10 AM. Make sure your mouthguards and hand wraps are packed!"
+      "title": "Annual General Meeting",
+      "date": "10 Feb 2026",
+      "image": "",
+      "body": "All members and parents are invited to our Annual General Meeting next week. We will be discussing the CIC roadmap, grant updates, and structural changes to the gym."
+    },
+    {
+      "title": "Focus Mitts Masterclass",
+      "date": "25 Feb 2026",
+      "image": "",
+      "body": "We will be running a special 90-minute focus mitts and ring-craft masterclass this weekend for our senior competitive squad. Bring your 14oz-16oz gloves."
+    },
+    {
+      "title": "Gym Renovation Phase 1",
+      "date": "10 Mar 2026",
+      "image": "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=800&q=80",
+      "body": "The first phase of our gym upgrade is complete! The changing rooms have been fully repainted, and we’ve installed new non-slip matting in the warm-up area."
+    },
+    {
+      "title": "Women's Only Boxing Classes Launched",
+      "date": "20 Mar 2026",
+      "image": "",
+      "body": "We are proud to introduce a new women's only session to the timetable. These sessions are perfect for beginners looking to learn the sweet science in a comfortable, supportive environment."
+    },
+    {
+      "title": "Regional Tournament Results",
+      "date": "02 Apr 2026",
+      "image": "",
+      "body": "Massive congratulations to our squad who traveled over the weekend. We brought home three hard-fought victories and invaluable ring experience."
+    },
+    {
+      "title": "Nutrition Workshop Announcement",
+      "date": "15 Apr 2026",
+      "image": "",
+      "body": "Join us next Thursday for a free nutrition workshop led by our coaching staff. We will cover weight management, pre-fight fueling, and general athletic health."
+    },
+    {
+      "title": "Club Merchandise Now Available",
+      "date": "28 Apr 2026",
+      "image": "",
+      "body": "Represent the club! Official Hercules Boxing Club t-shirts and hoodies are now in stock at the front desk. All proceeds go directly back into gym equipment."
+    },
+    {
+      "title": "Islington Youth Outreach Program",
+      "date": "10 May 2026",
+      "image": "",
+      "body": "We are launching a new outreach initiative specifically aimed at bringing teens from the local Islington area into the gym for free introductory sessions."
+    },
+    {
+      "title": "First Aid Training Completed",
+      "date": "20 May 2026",
+      "image": "",
+      "body": "Safety first. All of our core coaches successfully renewed their emergency First Aid and Safeguarding certifications this weekend."
+    },
+    {
+      "title": "Volunteer Clean-Up Day",
+      "date": "02 Jun 2026",
+      "image": "",
+      "body": "A huge thank you to all the parents and boxers who showed up on Sunday to help deep-clean the gym, scrub the ring canvas, and organize the equipment room!"
+    },
+    {
+      "title": "New Heavy Bags Installed",
+      "date": "14 Jun 2026",
+      "image": "https://images.unsplash.com/photo-1517438476312-10d79c077509?auto=format&fit=crop&w=800&q=80",
+      "body": "Come test out the brand new heavy bags we just hung up! Thanks to recent community donations, we've replaced four of our oldest bags with top-tier equipment."
+    },
+    {
+      "title": "Fighter of the Month: Marcus T.",
+      "date": "28 Jun 2026",
+      "image": "",
+      "body": "Marcus has shown incredible dedication this month, never missing a 6 AM run and showing massive improvements in his defensive footwork. Keep it up, champ!"
+    },
+    {
+      "title": "Holiday Timetable Changes",
+      "date": "01 Jul 2026",
+      "image": "",
+      "body": "Please note the modified timetable for the summer holidays. We are shifting the junior sessions slightly earlier to accommodate the school break. Check the Timetable page for exact hours."
+    },
+    {
+      "title": "Upcoming Inter-Club Scrimmage",
+      "date": "15 Jul 2026",
+      "image": "",
+      "body": "We will be hosting our friends from neighboring clubs for a controlled, closed-door sparring session next Saturday. Boxers, make sure your medicals are up to date."
+    },
+    {
+      "title": "Equipment Grant Secured!",
+      "date": "28 Jul 2026",
+      "image": "",
+      "body": "Fantastic news! Thanks to the Islington Council, we have secured a local sports grant that will allow us to purchase new headgear, 16oz sparring gloves, and fresh skipping ropes for the youth squads."
+    },
+    {
+      "title": "Welcome Coach Sarah!",
+      "date": "05 Aug 2026",
+      "image": "",
+      "body": "Please join us in welcoming Sarah to our coaching staff. She brings years of amateur experience and will be taking the lead on our new beginner development programs."
+    },
+    {
+      "title": "Summer Sparring Camp Success",
+      "date": "12 Aug 2026",
+      "image": "",
+      "body": "Huge shoutout to all the boxers who attended our intense 3-day summer sparring camp. The discipline, respect, and technical growth shown by the junior squad was outstanding."
+    },
+    {
+      "title": "New Junior Squad Intakes",
+      "date": "20 Aug 2026",
+      "image": "https://images.unsplash.com/photo-1509563268479-0f004cf3f58b?auto=format&fit=crop&w=800&q=80",
+      "body": "We are officially opening our doors for a new junior squad intake starting next Monday. If you have an under-16 looking to build discipline and fitness, bring them down!"
+    },
+    {
+      "title": "England Boxing Affiliation Update",
+      "date": "28 Aug 2026",
+      "image": "",
+      "body": "We are thrilled to announce that our paperwork for official England Boxing affiliation is in its final stages. This will soon allow our competitive athletes to enter official national tournaments."
     }
   ]
 }
