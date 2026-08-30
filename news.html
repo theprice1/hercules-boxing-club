@@ -13,23 +13,16 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="css/style.css"
-      media="print"
-      onload="this.media = 'all'"
-    />
-    <link
-      rel="stylesheet"
-      href="css/custom.css"
-      media="print"
-      onload="this.media = 'all'"
-    />
-    <noscript>
-      <link rel="stylesheet" href="css/style.css" />
-      <link rel="stylesheet" href="css/custom.css" />
-    </noscript>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <!-- Standard synchronous CSS links to prevent layout shifts -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+
+    <!-- Deferred Markdown Parser Library -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"
+      defer
+    ></script>
 
     <link
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;800&display=swap"
@@ -41,14 +34,17 @@
     <style>
       body {
         font-family: "Inter", sans-serif;
+        font-display: swap;
       }
       .font-bebas {
         font-family: "Bebas Neue", sans-serif;
+        font-display: swap;
       }
     </style>
   </head>
 
   <body class="bg-transparent text-gray-900 flex flex-col min-h-screen">
+    <!-- Fixed background with explicit dimensions to prevent CLS -->
     <div class="fixed inset-0 z-[-1]">
       <img
         srcset="
@@ -59,7 +55,10 @@
         src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=1920&q=80"
         alt="Amateur Boxing Gym"
         class="w-full h-full object-cover"
+        width="1920"
+        height="1080"
         fetchpriority="high"
+        loading="eager"
       />
       <div class="absolute inset-0 bg-white/40"></div>
     </div>
@@ -180,7 +179,6 @@
                 ? `<img src="${article.image}" alt="${article.title}" class="w-full h-48 object-cover rounded mb-4 shadow-sm">`
                 : "";
 
-              // Changed to Solid White background (bg-white) and darker text (text-gray-900)
               const card = `
                 <article class="bg-white p-6 rounded-xl shadow-lg border-2 border-gray-100 flex flex-col h-full hover:shadow-2xl hover:-translate-y-1 transition duration-300">
                   <span class="inline-block bg-purple-100 text-purple-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider w-max mb-3">${article.date}</span>
