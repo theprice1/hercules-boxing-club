@@ -166,6 +166,32 @@ collections:
                   required: false,
                 }
 
+  - name: "social_data"
+    label: "Socials"
+    files:
+      - label: "Social Media Hub"
+        name: "social"
+        file: "data/social.json"
+        fields:
+          - label: "Page Intro Subtitle"
+            name: "intro"
+            widget: "string"
+            hint: "e.g., Follow our daily grind, fight highlights, and gym culture across all our official channels."
+          - label: "Instagram App Widget Class"
+            name: "instagram_code"
+            widget: "string"
+            hint: "e.g., elfsight-app-773fbd50-6aa2-45a3-a590-d144ae87e1a1"
+          - label: "TikTok App Widget Class"
+            name: "tiktok_code"
+            widget: "string"
+            required: false
+            hint: "e.g., elfsight-app-..."
+          - label: "Facebook App Widget Class"
+            name: "facebook_code"
+            widget: "string"
+            required: false
+            hint: "e.g., elfsight-app-..."
+
   - name: "safeguarding_data"
     label: "Safeguarding"
     files:
