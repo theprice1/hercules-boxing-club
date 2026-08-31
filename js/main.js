@@ -1,16 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
   console.log("Hercules Nav Script Loaded");
 
-  const menuButton =
-    document.querySelector('button[aria-label="Open mobile menu"]') ||
-    document.querySelector(".md\\:hidden");
   const navContainer = document.querySelector("nav .container");
-
   if (!navContainer) {
     console.warn("Nav container not found");
     return;
   }
 
+  // Clean, standard selector that matches any navigation button or mobile toggle
+  const menuButton =
+    document.querySelector("nav button") ||
+    document.querySelector(".md\\:hidden");
   if (!menuButton) {
     console.warn("Mobile menu button not found");
     return;
