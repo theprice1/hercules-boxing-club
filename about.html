@@ -433,7 +433,39 @@
       </div>
     </footer>
 
-    <!-- <script src="js/main.j?v=2"></script> -->
     <script src="js/main.js?v=2" defer></script>
+
+    <!-- Google Analytics Lazy Loader -->
+    <script>
+      let scriptsLoaded = false;
+      function loadHeavyScripts() {
+        if (scriptsLoaded) return;
+        scriptsLoaded = true;
+
+        var gtagScript = document.createElement("script");
+        gtagScript.async = true;
+        gtagScript.src =
+          "https://www.googletagmanager.com/gtag/js?id=G-SZFQ3D87JW";
+        document.body.appendChild(gtagScript);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+        gtag("config", "G-SZFQ3D87JW");
+      }
+
+      ["scroll", "mousemove", "touchstart", "keydown"].forEach(
+        function (event) {
+          window.addEventListener(event, loadHeavyScripts, {
+            once: true,
+            passive: true,
+          });
+        },
+      );
+
+      setTimeout(loadHeavyScripts, 3500);
+    </script>
   </body>
 </html>
