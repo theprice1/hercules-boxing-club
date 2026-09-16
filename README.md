@@ -1,6 +1,7 @@
 # Hercules Boxing Club — Web Platform Prototype
 
 [![Status](https://img.shields.io/badge/Status-Portfolio_Prototype-purple?style=flat-square)]()
+
 [![Stack](https://img.shields.io/badge/Stack-Tailwind_CSS_|_PWA_|_HTML5-blue?style=flat-square)]()
 
 A high-performance, responsive Progressive Web Application (PWA) designed and developed for Hercules Boxing Club.
@@ -31,3 +32,6 @@ cd hercules-boxing-club
 
 # Open index.html in your local browser, or use VS Code Live Server
 ```
+
+📄 Attribution
+Designed and engineered by Anthony Price.
