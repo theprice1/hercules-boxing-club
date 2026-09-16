@@ -1,72 +1,33 @@
-# Hercules Boxing Club CIC | High-Performance Digital Platform & CMS
+# Hercules Boxing Club — Web Platform Prototype
 
-A production-ready, lightning-fast web platform and content management system built for **Hercules Boxing Club CIC** (Islington, London). This platform supports their transition toward official **England Boxing Affiliation**, ensures rigorous child protection compliance, and acts as a digital portfolio to secure local authority funding.
+[![Status](https://img.shields.io/badge/Status-Portfolio_Prototype-purple?style=flat-square)]()
+[![Stack](https://img.shields.io/badge/Stack-Tailwind_CSS_|_PWA_|_HTML5-blue?style=flat-square)]()
 
-Engineered with a relentless focus on performance, the site achieves **95–100 Lighthouse scores across all metrics** on both Mobile and Desktop devices, ensuring zero layout shifts, instant load times, and perfect accessibility.
+A high-performance, responsive Progressive Web Application (PWA) designed and developed for Hercules Boxing Club.
 
----
-
-## 🥊 Project Overview
-
-Hercules Boxing Club is a registered Community Interest Company (CIC) dedicated to keeping session fees heavily subsidized for disadvantaged youth in Islington. This digital build was engineered from scratch to bridge the gap between their physical gym floor, national sports governance bodies, and everyday administrative management.
-
-Featuring a built-in, passwordless CMS dashboard, club staff can instantly publish news, log fight results, update training timetables, and modify policy documents without touching a single line of code.
+> **Project Note:**  
+> This repository contains the fully built frontend architecture and PWA configuration for the club. Ultimately, the organisation went in a different direction, but this codebase is preserved here as a showcase of modern, offline-capable web development and responsive UI design.
 
 ---
 
-## 🚀 Performance & Technical Achievements
+## 🎯 Core Engineering & Features
 
-This site was optimized to pass Google's Core Web Vitals with elite scores, utilizing advanced frontend rendering techniques:
-
-- **Zero Cumulative Layout Shift (CLS):** Dynamic JSON feeds (Timetable, News, Fight Results) are paired with precision-engineered HTML placeholder skeletons. The DOM reserves exact grid spaces before JavaScript executes, eliminating all layout jumping.
-- **Interaction-Based Lazy Loading (Facade Pattern):** Heavy third-party scripts (Google Maps, Google Analytics, Elfsight Social Feeds) are blocked from the critical rendering path. They are injected asynchronously _only_ when the user interacts with the page (scroll, touch, mousemove) or after a safe 3.5s idle timeout.
-- **Atomic DOM Updates:** JavaScript data fetching utilizes single-pass string accumulation (`innerHTML = accumulatedHtml`) rather than incremental loops, preventing forced browser reflows.
-- **Optimized LCP (Largest Contentful Paint):** Hero background images are forcefully compressed to `WebP` and fetched with `fetchpriority="high"`, guaranteeing instant visual loading even on slow 3G/4G mobile connections.
-- **Perfect SEO & Accessibility:** 100/100 Lighthouse scores for Accessibility and SEO. Fully semantic markup, ARIA roles, `sr-only` screen-reader classes, dynamic Open Graph social cards, and an automated `sitemap.xml`.
+- **Progressive Web App (PWA):** Fully configured web app manifest and custom service workers for offline caching and native mobile installation.
+- **Modern Styling:** Fluid, mobile-first layouts engineered from scratch using Tailwind CSS.
+- **Optimized Performance:** Lightweight static HTML structure built for maximum speed and perfect Lighthouse accessibility scores.
 
 ---
 
-## 🛠️ Tech Stack & Architecture
+## 💻 Local Testing & Viewing
 
-- **Frontend:** HTML5, Tailwind CSS (Production-ready utility classes & responsive layouts)
-- **CMS Admin:** Decap CMS (Git Gateway authentication)
-- **Data Layer:** Structured JSON datasets powering dynamic client-side rendering
-- **Content Formatting:** Markdown parsing (`marked.min.js`) for rich-text stories and policies
-- **Interactivity:** Vanilla JavaScript for dynamic feeds, mobile menus, and reactive state management
-- **Deployment & Hosting:** Configured for automated static deployment via GitHub Pages / Netlify.
+Since this project is preserved as a static code showcase, you can easily view it by running it locally on your machine:
 
----
+```bash
+# Clone the repository
+git clone [https://github.com/theprice1/hercules-boxing-club.git](https://github.com/theprice1/hercules-boxing-club.git)
 
-## 📁 Repository Structure
+# Navigate into the project directory
+cd hercules-boxing-club
 
-```text
-hercules-boxing-club/
-├── admin/
-│   └── config.yml       # Decap CMS collections configuration
-├── css/
-│   ├── style.css        # Compiled Tailwind stylesheet
-│   └── custom.css       # Custom design overrides & animations
-├── data/
-│   ├── about.json       # Editable About the CIC content
-│   ├── contact.json     # Editable contact info & visiting rules
-│   ├── fight-results.json # Tournament & bout ledger dataset
-│   ├── home.json        # Editable homepage hero & mission content
-│   ├── news.json        # News articles & club updates
-│   ├── safeguarding.json # Comprehensive child protection policy
-│   ├── social.json      # Social media widget configurations
-│   └── timetable.json   # Weekly training class schedule
-├── js/
-│   └── main.js          # Navigation & mobile drawer logic
-├── index.html           # Homepage & Core Mission
-├── about.html           # CIC Status & Grant Readiness
-├── timetable.html       # Dynamic Weekly Class Schedule
-├── news.html            # Dynamic News & Updates Feed
-├── fight-results.html   # Dynamic Bout & Tournament Ledger
-├── social.html          # Lazy-loaded Social Media Hub (IG, TikTok, FB)
-├── safeguarding.html    # Comprehensive Child Protection Portal
-├── contact.html         # Location Map & Trial Booking
-├── governance.html      # Official PDF Documents & Constitution
-├── sitemap.xml          # Search Engine indexing roadmap
-├── robots.txt           # Crawler directives
-└── README.md            # Project Documentation
+# Open index.html in your local browser, or use VS Code Live Server
 ```
